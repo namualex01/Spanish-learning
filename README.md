@@ -31,6 +31,11 @@ python scripts/scrape_quizlet_vocab.py \
 - 如果词条包含 `book`（册数）和 `unit`（单元）字段，页面会自动启用「册数选择 + 单元选择」联动筛选。
 - 若 JSON 内没有 `book/unit` 字段，页面会尝试从文件名（如“第1册-第2单元.json”）自动推断。
 
+### 冲突解决说明
+
+- `README.md` 与 `index.html` 已完成冲突清理（无 `<<<<<<< / ======= / >>>>>>>` 标记）。
+- 最终保留能力：Quizlet 抓取脚本 + 外部 JSON 导入 + 册数/单元筛选 + 多 JSON 合并加载。
+
 推荐 JSON 词条格式示例：
 
 ```json

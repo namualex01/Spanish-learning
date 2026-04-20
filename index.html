@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>西班牙语背单词</title>
+  <style>
+    :root {
+      --bg: #f6f7fb;
+      --card: rgba(255,255,255,0.88);
+      --card-strong: #ffffff;
+      --text: #172033;
+      --muted: #6b7280;
+      --primary: #2563eb;
+      --primary-weak: #dbeafe;
+      --success: #059669;
+      --warning: #d97706;
+      --danger: #dc2626;
+      --border: rgba(23, 32, 51, 0.1);
+      --shadow: 0 10px 30px rgba(23, 32, 51, 0.08);
+      --radius: 22px;
+      --radius-sm: 14px;
+      --max-width: 960px;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background:
+        radial-gradient(circle at top left, #dbeafe 0%, transparent 32%),
+        radial-gradient(circle at top right, #fde68a 0%, transparent 22%),
+        linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
+      color: var(--text);
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      min-height: 100%;
+    }
+
+    body {
+      padding: env(safe-area-inset-top) 16px calc(24px + env(safe-area-inset-bottom));
+    }
+
+    .app {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      gap: 16px;
+    }
+
+    .panel {
+      background: var(--card);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .hero {
+      padding: 22px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .hero-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: var(--primary-weak);
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(26px, 5vw, 38px);
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.6;
+      max-width: 680px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 320px minmax(0, 1fr);
+      gap: 16px;
+      align-items: start;
+    }
+
+    .sidebar,
+    .main {
+      display: grid;
+      gap: 16px;
+    }
+
+    .section {
+      padding: 16px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .section-title h2,
+    .section-title h3 {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.2;
+    }
+
+    .hint {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .row,
+    .controls {
+      display: grid;
+      gap: 10px;
+    }
+
+    .row-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    label {
+      display: grid;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    select,
+    input,
+    textarea,
+    button {
+      font: inherit;
+    }
+
+    select,
+    input,
+    textarea {
+      width: 100%;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.96);
+      color: var(--text);
+      border-radius: 14px;
+      padding: 12px 14px;
+      outline: none;
+      transition: 0.2s ease;
+    }
+
+    select:focus,
+    input:focus,
+    textarea:focus {
+      border-color: rgba(37, 99, 235, 0.45);
+      box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+      line-height: 1.5;
+    }
+
+    button {
+      border: none;
+      border-radius: 14px;
+      padding: 12px 16px;
+      cursor: pointer;
+      transition: transform 0.08s ease, box-shadow 0.2s ease, opacity 0.2s ease, background 0.2s ease;
+      font-weight: 700;
+      min-height: 46px;
+    }
+
+    button:active {
+      transform: translateY(1px) scale(0.99);
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+      box-shadow: 0 10px 18px rgba(37, 99, 235, 0.2);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.92);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .btn-success {
+      background: rgba(5, 150, 105, 0.12);
+      color: var(--success);
+    }
+
+    .btn-danger {
+      background: rgba(220, 38, 38, 0.1);
+      color: var(--danger);
+    }
+
+    .btn-warning {
+      background: rgba(217, 119, 6, 0.12);
+      color: var(--warning);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .stat {
+      border-radius: 18px;
+      padding: 14px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.75));
+      border: 1px solid var(--border);
+      display: grid;
+      gap: 6px;
+      min-height: 90px;
+    }
+
+    .stat .label {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .stat .value {
+      font-size: clamp(18px, 4vw, 28px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .mode-switch {
+      display: inline-grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      padding: 6px;
+      background: rgba(37, 99, 235, 0.08);
+      border-radius: 18px;
+    }
+
+    .mode-btn {
+      background: transparent;
+      color: var(--muted);
+      font-weight: 700;
+      border-radius: 12px;
+      min-height: 40px;
+    }
+
+    .mode-btn.active {
+      background: #fff;
+      color: var(--primary);
+      box-shadow: 0 8px 16px rgba(37, 99, 235, 0.12);
+    }
+
+    .word-card {
+      padding: 18px;
+      display: grid;
+      gap: 16px;
+    }
+
+    .word-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .word-main {
+      display: grid;
+      gap: 8px;
+    }
+
+    .word-index {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .word {
+      font-size: clamp(32px, 8vw, 54px);
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -0.03em;
+      word-break: break-word;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .chip {
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(37, 99, 235, 0.08);
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .translation,
+    .example,
+    .spelling-box,
+    .feedback-box,
+    .progress-box,
+    .custom-box {
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: rgba(255,255,255,0.82);
+      padding: 14px;
+    }
+
+    .translation strong,
+    .example strong,
+    .spelling-box strong,
+    .feedback-box strong,
+    .progress-box strong,
+    .custom-box strong {
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+
+    .translation p,
+    .example p,
+    .feedback-box p,
+    .progress-box p,
+    .custom-box p {
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    .example p + p {
+      margin-top: 6px;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .pronounce-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .ghost {
+      color: var(--muted);
+    }
+
+    .spelling-area {
+      display: grid;
+      gap: 12px;
+    }
+
+    .masked-word {
+      font-size: clamp(24px, 6vw, 36px);
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      line-height: 1.25;
+      word-break: break-word;
+    }
+
+    .tips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tip {
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(23, 32, 51, 0.05);
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .result {
+      min-height: 22px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .result.success {
+      color: var(--success);
+    }
+
+    .result.error {
+      color: var(--danger);
+    }
+
+    .result.warning {
+      color: var(--warning);
+    }
+
+    .list-preview {
+      display: grid;
+      gap: 8px;
+      max-height: 220px;
+      overflow: auto;
+      padding-right: 4px;
+    }
+
+    .list-item {
+      padding: 12px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: rgba(255,255,255,0.82);
+      display: grid;
+      gap: 4px;
+    }
+
+    .list-item b {
+      font-size: 15px;
+    }
+
+    .footer-note {
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+      padding: 4px 0 10px;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    @media (max-width: 860px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        order: 2;
+      }
+
+      .main {
+        order: 1;
+      }
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+
+      .hero,
+      .section,
+      .word-card {
+        padding: 14px;
+      }
+
+      .stats {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .stats .stat:last-child {
+        grid-column: span 2;
+      }
+
+      .row-2 {
+        grid-template-columns: 1fr;
+      }
+
+      .actions,
+      .cta-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .actions button,
+      .cta-row button {
+        width: 100%;
+      }
+
+      .word {
+        font-size: 38px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <section class="panel hero">
+      <div class="hero-top">
+        <div class="brand">
+          <div class="badge">🇪🇸 西班牙语单词训练</div>
+          <h1>背单词 + 发音 + 拼写练习</h1>
+          <p class="subtitle">
+            纯前端单文件网页，无需后端。支持词库切换、单词朗读、拼写模式、学习进度本地保存，以及手机端自适应。
+          </p>
+        </div>
+        <div class="actions">
+          <button class="btn-secondary" id="shuffleBtn">打乱顺序</button>
+          <button class="btn-secondary" id="resetProgressBtn">重置进度</button>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <div class="label">当前词库</div>
+          <div class="value" id="statDeck">—</div>
+        </div>
+        <div class="stat">
+          <div class="label">学习进度</div>
+          <div class="value" id="statProgress">0 / 0</div>
+        </div>
+        <div class="stat">
+          <div class="label">拼写正确率</div>
+          <div class="value" id="statAccuracy">0%</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <aside class="sidebar">
+        <div class="panel section">
+          <div class="section-title">
+            <h2>学习设置</h2>
+          </div>
+          <div class="controls">
+            <label>
+              选择词库
+              <select id="deckSelect"></select>
+            </label>
+
+            <div class="row-2">
+              <label>
+                朗读语速
+                <input id="rateRange" type="range" min="0.6" max="1.2" step="0.1" value="0.9" />
+              </label>
+              <label>
+                当前语速
+                <input id="rateValue" type="text" value="0.9" readonly />
+              </label>
+            </div>
+
+            <label>
+              学习模式
+              <div class="mode-switch">
+                <button class="mode-btn active" id="flashcardModeBtn" type="button">卡片模式</button>
+                <button class="mode-btn" id="spellingModeBtn" type="button">拼写模式</button>
+              </div>
+            </label>
+
+            <div class="hint">
+              发音使用浏览器语音合成（Web Speech API）。若你的设备没有西班牙语语音包，仍可正常背词，但朗读效果可能受系统影响。
+            </div>
+          </div>
+        </div>
+
+        <div class="panel section">
+          <div class="section-title">
+            <h3>内置词库预览</h3>
+            <span class="hint" id="deckCountHint">0 个单词</span>
+          </div>
+          <div class="list-preview" id="deckPreview"></div>
+        </div>
+
+        <div class="panel section">
+          <div class="section-title">
+            <h3>自定义词库</h3>
+          </div>
+          <div class="custom-box">
+            <p>
+              每行一个单词，格式：<br />
+              <strong>hola | 你好 | interj. | Hola, ¿cómo estás?</strong>
+            </p>
+          </div>
+          <label>
+            粘贴你的词库
+            <textarea id="customDeckInput" placeholder="例如：&#10;hola | 你好 | interj. | Hola, ¿cómo estás?&#10;gracias | 谢谢 | interj. | Muchas gracias."></textarea>
+          </label>
+          <div class="cta-row">
+            <button class="btn-primary" id="importDeckBtn">导入为自定义词库</button>
+            <button class="btn-danger" id="clearCustomDeckBtn">清空自定义词库</button>
+          </div>
+          <div class="hint">自定义词库会保存在当前浏览器的本地存储中。</div>
+        </div>
+      </aside>
+
+      <main class="main">
+        <div class="panel word-card">
+          <div class="word-head">
+            <div class="word-main">
+              <div class="word-index" id="wordIndex">第 1 / 1 个</div>
+              <div class="word" id="wordText">hola</div>
+              <div class="meta" id="wordMeta"></div>
+            </div>
+            <div class="cta-row">
+              <button class="btn-secondary pronounce-btn" id="pronounceBtn">🔊 发音</button>
+              <button class="btn-secondary" id="toggleMeaningBtn">显示释义</button>
+            </div>
+          </div>
+
+          <div class="translation hidden" id="translationBox">
+            <strong>中文释义</strong>
+            <p id="translationText"></p>
+          </div>
+
+          <div class="example" id="exampleBox">
+            <strong>例句</strong>
+            <p id="exampleText"></p>
+          </div>
+
+          <div class="progress-box">
+            <strong>当前学习操作</strong>
+            <div class="cta-row" style="margin-top: 6px;">
+              <button class="btn-success" id="knownBtn">我会了</button>
+              <button class="btn-warning" id="reviewBtn">稍后复习</button>
+              <button class="btn-secondary" id="nextBtn">下一个</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel section" id="spellingPanel">
+          <div class="section-title">
+            <h2>拼写练习</h2>
+            <span class="hint">听发音、看释义、拼单词</span>
+          </div>
+
+          <div class="spelling-box">
+            <strong>单词轮廓</strong>
+            <div class="spelling-area">
+              <div class="masked-word" id="maskedWord">_ _ _ _</div>
+              <div class="tips" id="tips"></div>
+            </div>
+          </div>
+
+          <label>
+            输入你听到或记住的西班牙语单词
+            <input id="spellingInput" type="text" placeholder="请输入完整拼写" autocomplete="off" autocapitalize="off" spellcheck="false" />
+          </label>
+
+          <div class="cta-row">
+            <button class="btn-primary" id="checkSpellingBtn">检查拼写</button>
+            <button class="btn-secondary" id="showAnswerBtn">显示答案</button>
+            <button class="btn-secondary" id="playAgainBtn">再听一遍</button>
+          </div>
+
+          <div class="feedback-box">
+            <strong>结果反馈</strong>
+            <div class="result" id="resultText"></div>
+            <p id="feedbackText" class="ghost">准备好后开始拼写。</p>
+          </div>
+        </div>
+      </main>
+    </section>
+
+    <div class="footer-note">数据只保存在你的浏览器本地，不会上传到服务器。</div>
+  </div>
+
+  <script>
+    const BUILT_IN_DECKS = {
+      basics: {
+        label: '基础入门 A1',
+        items: [
+          { word: 'hola', meaning: '你好', pos: 'interj.', example: 'Hola, ¿cómo estás?' },
+          { word: 'adiós', meaning: '再见', pos: 'interj.', example: 'Adiós, nos vemos mañana.' },
+          { word: 'gracias', meaning: '谢谢', pos: 'interj.', example: 'Muchas gracias por tu ayuda.' },
+          { word: 'por favor', meaning: '请；拜托', pos: 'loc.', example: 'Una botella de agua, por favor.' },
+          { word: 'sí', meaning: '是的', pos: 'adv.', example: 'Sí, entiendo la pregunta.' },
+          { word: 'no', meaning: '不；不是', pos: 'adv.', example: 'No tengo clase hoy.' },
+          { word: 'amigo', meaning: '朋友（男性）', pos: 'n.', example: 'Carlos es mi mejor amigo.' },
+          { word: 'familia', meaning: '家庭；家人', pos: 'n.', example: 'Mi familia vive en España.' },
+          { word: 'casa', meaning: '房子；家', pos: 'n.', example: 'Mi casa está cerca de la universidad.' },
+          { word: 'comer', meaning: '吃', pos: 'v.', example: 'Quiero comer algo ahora.' },
+          { word: 'beber', meaning: '喝', pos: 'v.', example: 'Voy a beber café.' },
+          { word: 'estudiar', meaning: '学习', pos: 'v.', example: 'Necesito estudiar español todos los días.' }
+        ]
+      },
+      travel: {
+        label: '旅行常用',
+        items: [
+          { word: 'aeropuerto', meaning: '机场', pos: 'n.', example: 'El aeropuerto está a veinte minutos.' },
+          { word: 'hotel', meaning: '酒店', pos: 'n.', example: 'Nuestro hotel está en el centro.' },
+          { word: 'billete', meaning: '票；车票；机票', pos: 'n.', example: 'He comprado un billete de tren.' },
+          { word: 'maleta', meaning: '行李箱', pos: 'n.', example: 'Mi maleta es muy pesada.' },
+          { word: 'pasaporte', meaning: '护照', pos: 'n.', example: 'No olvides tu pasaporte.' },
+          { word: 'mapa', meaning: '地图', pos: 'n.', example: 'Necesitamos un mapa de la ciudad.' },
+          { word: 'playa', meaning: '海滩', pos: 'n.', example: 'Mañana iremos a la playa.' },
+          { word: 'reserva', meaning: '预订', pos: 'n.', example: 'Tengo una reserva para esta noche.' },
+          { word: 'taxi', meaning: '出租车', pos: 'n.', example: 'Tomemos un taxi al museo.' },
+          { word: 'calle', meaning: '街道', pos: 'n.', example: 'La tienda está en esta calle.' },
+          { word: 'derecha', meaning: '右边', pos: 'n./adv.', example: 'El banco está a la derecha.' },
+          { word: 'izquierda', meaning: '左边', pos: 'n./adv.', example: 'Gira a la izquierda en la esquina.' }
+        ]
+      },
+      business: {
+        label: '商务基础',
+        items: [
+          { word: 'empresa', meaning: '公司；企业', pos: 'n.', example: 'Trabajo en una empresa internacional.' },
+          { word: 'cliente', meaning: '客户', pos: 'n.', example: 'El cliente está satisfecho con el servicio.' },
+          { word: 'mercado', meaning: '市场', pos: 'n.', example: 'Necesitamos analizar el mercado local.' },
+          { word: 'precio', meaning: '价格', pos: 'n.', example: 'El precio incluye el transporte.' },
+          { word: 'pedido', meaning: '订单', pos: 'n.', example: 'Hemos recibido un nuevo pedido.' },
+          { word: 'reunión', meaning: '会议', pos: 'n.', example: 'La reunión empieza a las diez.' },
+          { word: 'contrato', meaning: '合同', pos: 'n.', example: 'El contrato se firmará mañana.' },
+          { word: 'ventas', meaning: '销售额；销售', pos: 'n.', example: 'Las ventas han aumentado este mes.' },
+          { word: 'proveedor', meaning: '供应商', pos: 'n.', example: 'El proveedor enviará la mercancía hoy.' },
+          { word: 'negociar', meaning: '谈判', pos: 'v.', example: 'Vamos a negociar nuevas condiciones.' },
+          { word: 'factura', meaning: '发票', pos: 'n.', example: 'Por favor, envíame la factura por correo.' },
+          { word: 'entrega', meaning: '交付；送达', pos: 'n.', example: 'La entrega llegará el viernes.' }
+        ]
+      }
+    };
+
+    const STORAGE_KEYS = {
+      activeDeck: 'spanish_vocab_active_deck_v1',
+      customDeck: 'spanish_vocab_custom_deck_v1',
+      progress: 'spanish_vocab_progress_v1',
+      accuracy: 'spanish_vocab_accuracy_v1',
+      mode: 'spanish_vocab_mode_v1',
+      rate: 'spanish_vocab_rate_v1'
+    };
+
+    const state = {
+      activeDeckKey: localStorage.getItem(STORAGE_KEYS.activeDeck) || 'basics',
+      mode: localStorage.getItem(STORAGE_KEYS.mode) || 'flashcard',
+      rate: Number(localStorage.getItem(STORAGE_KEYS.rate) || 0.9),
+      currentIndex: 0,
+      translationVisible: false,
+      voices: [],
+      stats: loadAccuracy(),
+      progressMap: loadProgress(),
+      decks: {}
+    };
+
+    const el = {
+      deckSelect: document.getElementById('deckSelect'),
+      deckPreview: document.getElementById('deckPreview'),
+      deckCountHint: document.getElementById('deckCountHint'),
+      statDeck: document.getElementById('statDeck'),
+      statProgress: document.getElementById('statProgress'),
+      statAccuracy: document.getElementById('statAccuracy'),
+      wordIndex: document.getElementById('wordIndex'),
+      wordText: document.getElementById('wordText'),
+      wordMeta: document.getElementById('wordMeta'),
+      translationBox: document.getElementById('translationBox'),
+      translationText: document.getElementById('translationText'),
+      exampleText: document.getElementById('exampleText'),
+      toggleMeaningBtn: document.getElementById('toggleMeaningBtn'),
+      pronounceBtn: document.getElementById('pronounceBtn'),
+      knownBtn: document.getElementById('knownBtn'),
+      reviewBtn: document.getElementById('reviewBtn'),
+      nextBtn: document.getElementById('nextBtn'),
+      shuffleBtn: document.getElementById('shuffleBtn'),
+      resetProgressBtn: document.getElementById('resetProgressBtn'),
+      flashcardModeBtn: document.getElementById('flashcardModeBtn'),
+      spellingModeBtn: document.getElementById('spellingModeBtn'),
+      spellingPanel: document.getElementById('spellingPanel'),
+      maskedWord: document.getElementById('maskedWord'),
+      tips: document.getElementById('tips'),
+      spellingInput: document.getElementById('spellingInput'),
+      checkSpellingBtn: document.getElementById('checkSpellingBtn'),
+      showAnswerBtn: document.getElementById('showAnswerBtn'),
+      playAgainBtn: document.getElementById('playAgainBtn'),
+      resultText: document.getElementById('resultText'),
+      feedbackText: document.getElementById('feedbackText'),
+      rateRange: document.getElementById('rateRange'),
+      rateValue: document.getElementById('rateValue'),
+      customDeckInput: document.getElementById('customDeckInput'),
+      importDeckBtn: document.getElementById('importDeckBtn'),
+      clearCustomDeckBtn: document.getElementById('clearCustomDeckBtn')
+    };
+
+    function loadCustomDeck() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEYS.customDeck);
+        if (!raw) return null;
+        const parsed = JSON.parse(raw);
+        if (!Array.isArray(parsed) || !parsed.length) return null;
+        return parsed.filter(item => item.word && item.meaning);
+      } catch {
+        return null;
+      }
+    }
+
+    function saveCustomDeck(items) {
+      localStorage.setItem(STORAGE_KEYS.customDeck, JSON.stringify(items));
+    }
+
+    function loadProgress() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEYS.progress);
+        return raw ? JSON.parse(raw) : {};
+      } catch {
+        return {};
+      }
+    }
+
+    function saveProgress() {
+      localStorage.setItem(STORAGE_KEYS.progress, JSON.stringify(state.progressMap));
+    }
+
+    function loadAccuracy() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEYS.accuracy);
+        return raw ? JSON.parse(raw) : { correct: 0, total: 0 };
+      } catch {
+        return { correct: 0, total: 0 };
+      }
+    }
+
+    function saveAccuracy() {
+      localStorage.setItem(STORAGE_KEYS.accuracy, JSON.stringify(state.stats));
+    }
+
+    function normalizeWord(word) {
+      return word
+        .trim()
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/\s+/g, ' ');
+    }
+
+    function getAllDecks() {
+      const customItems = loadCustomDeck();
+      const decks = { ...BUILT_IN_DECKS };
+      if (customItems && customItems.length) {
+        decks.custom = {
+          label: '我的自定义词库',
+          items: customItems
+        };
+      }
+      return decks;
+    }
+
+    function getDeckItems() {
+      const deck = state.decks[state.activeDeckKey];
+      return deck ? deck.items : [];
+    }
+
+    function getCurrentWord() {
+      const items = getDeckItems();
+      if (!items.length) return null;
+      if (state.currentIndex >= items.length) state.currentIndex = 0;
+      return items[state.currentIndex];
+    }
+
+    function ensureDeckKeyValid() {
+      if (!state.decks[state.activeDeckKey]) {
+        state.activeDeckKey = Object.keys(state.decks)[0] || 'basics';
+        localStorage.setItem(STORAGE_KEYS.activeDeck, state.activeDeckKey);
+      }
+    }
+
+    function deckProgressKey(deckKey) {
+      return state.progressMap[deckKey] || { known: [], review: [] };
+    }
+
+    function setDeckProgress(deckKey, next) {
+      state.progressMap[deckKey] = next;
+      saveProgress();
+    }
+
+    function renderDeckOptions() {
+      el.deckSelect.innerHTML = '';
+      Object.entries(state.decks).forEach(([key, deck]) => {
+        const option = document.createElement('option');
+        option.value = key;
+        option.textContent = deck.label;
+        if (key === state.activeDeckKey) option.selected = true;
+        el.deckSelect.appendChild(option);
+      });
+    }
+
+    function renderDeckPreview() {
+      const items = getDeckItems();
+      el.deckCountHint.textContent = `${items.length} 个单词`;
+      el.deckPreview.innerHTML = '';
+      items.slice(0, 8).forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'list-item';
+        card.innerHTML = `<b>${escapeHtml(item.word)}</b><span>${escapeHtml(item.meaning)}</span><span class="ghost">${escapeHtml(item.pos || '')}</span>`;
+        el.deckPreview.appendChild(card);
+      });
+      if (items.length > 8) {
+        const more = document.createElement('div');
+        more.className = 'hint';
+        more.textContent = `还有 ${items.length - 8} 个单词...`;
+        el.deckPreview.appendChild(more);
+      }
+    }
+
+    function renderStats() {
+      const deck = state.decks[state.activeDeckKey];
+      const items = getDeckItems();
+      const progress = deckProgressKey(state.activeDeckKey);
+      const total = state.stats.total || 0;
+      const acc = total ? Math.round((state.stats.correct / total) * 100) : 0;
+      el.statDeck.textContent = deck ? deck.label : '—';
+      el.statProgress.textContent = `${progress.known.length} / ${items.length}`;
+      el.statAccuracy.textContent = `${acc}%`;
+    }
+
+    function renderWordCard() {
+      const item = getCurrentWord();
+      const items = getDeckItems();
+      if (!item) {
+        el.wordIndex.textContent = '暂无单词';
+        el.wordText.textContent = '请先导入词库';
+        el.wordMeta.innerHTML = '';
+        el.translationText.textContent = '—';
+        el.exampleText.textContent = '—';
+        return;
+      }
+
+      el.wordIndex.textContent = `第 ${state.currentIndex + 1} / ${items.length} 个`;
+      el.wordText.textContent = item.word;
+      el.translationText.textContent = item.meaning;
+      el.exampleText.textContent = item.example || '暂无例句';
+      el.translationBox.classList.toggle('hidden', !state.translationVisible);
+      el.toggleMeaningBtn.textContent = state.translationVisible ? '隐藏释义' : '显示释义';
+
+      const progress = deckProgressKey(state.activeDeckKey);
+      const metaParts = [
+        item.pos ? `<span class="chip">${escapeHtml(item.pos)}</span>` : '',
+        progress.known.includes(state.currentIndex) ? `<span class="chip">已掌握</span>` : '',
+        progress.review.includes(state.currentIndex) ? `<span class="chip">待复习</span>` : ''
+      ].filter(Boolean).join('');
+      el.wordMeta.innerHTML = metaParts;
+
+      renderSpellingArea();
+    }
+
+    function buildMaskedWord(word) {
+      return word.split('').map(ch => {
+        if (ch === ' ') return ' / ';
+        if (/[-'’]/.test(ch)) return ch;
+        return '_';
+      }).join(' ');
+    }
+
+    function renderSpellingArea() {
+      const item = getCurrentWord();
+      if (!item) return;
+      el.maskedWord.textContent = buildMaskedWord(item.word);
+      el.tips.innerHTML = '';
+      const tips = [
+        `中文：${item.meaning}`,
+        `词性：${item.pos || '—'}`,
+        `长度：${item.word.replace(/\s+/g, '').length}`
+      ];
+      tips.forEach(text => {
+        const tip = document.createElement('span');
+        tip.className = 'tip';
+        tip.textContent = text;
+        el.tips.appendChild(tip);
+      });
+      el.spellingInput.value = '';
+      setResult('', '', '准备好后开始拼写。');
+    }
+
+    function setResult(resultClass, resultText, feedbackText) {
+      el.resultText.className = `result ${resultClass || ''}`.trim();
+      el.resultText.textContent = resultText || '';
+      el.feedbackText.textContent = feedbackText || '';
+    }
+
+    function switchMode(mode) {
+      state.mode = mode;
+      localStorage.setItem(STORAGE_KEYS.mode, mode);
+      el.flashcardModeBtn.classList.toggle('active', mode === 'flashcard');
+      el.spellingModeBtn.classList.toggle('active', mode === 'spelling');
+      if (mode === 'spelling') {
+        el.spellingPanel.classList.remove('hidden');
+        setTimeout(() => el.spellingInput.focus(), 50);
+      } else {
+        el.spellingPanel.classList.remove('hidden');
+      }
+    }
+
+    function speak(text) {
+      if (!('speechSynthesis' in window)) {
+        setResult('warning', '当前浏览器不支持语音朗读', '建议使用最新版 Chrome、Edge 或 Safari。');
+        return;
+      }
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = 'es-ES';
+      utterance.rate = state.rate;
+      const voice = pickSpanishVoice();
+      if (voice) utterance.voice = voice;
+      window.speechSynthesis.speak(utterance);
+    }
+
+    function pickSpanishVoice() {
+      const voices = window.speechSynthesis.getVoices() || [];
+      state.voices = voices;
+      return voices.find(v => /es[-_]/i.test(v.lang)) || voices.find(v => /spanish/i.test(v.name)) || null;
+    }
+
+    function markWord(type) {
+      const items = getDeckItems();
+      if (!items.length) return;
+      const progress = deckProgressKey(state.activeDeckKey);
+      let known = [...progress.known];
+      let review = [...progress.review];
+      known = known.filter(i => i !== state.currentIndex);
+      review = review.filter(i => i !== state.currentIndex);
+      if (type === 'known') known.push(state.currentIndex);
+      if (type === 'review') review.push(state.currentIndex);
+      setDeckProgress(state.activeDeckKey, { known, review });
+      renderStats();
+      renderWordCard();
+    }
+
+    function nextWord() {
+      const items = getDeckItems();
+      if (!items.length) return;
+      state.currentIndex = (state.currentIndex + 1) % items.length;
+      state.translationVisible = false;
+      renderWordCard();
+    }
+
+    function shuffleDeck() {
+      const deck = state.decks[state.activeDeckKey];
+      if (!deck || deck.items.length < 2) return;
+      for (let i = deck.items.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [deck.items[i], deck.items[j]] = [deck.items[j], deck.items[i]];
+      }
+      state.currentIndex = 0;
+      renderDeckPreview();
+      renderWordCard();
+    }
+
+    function resetProgress() {
+      if (!confirm('确定要清空当前浏览器中的学习进度和拼写统计吗？')) return;
+      state.progressMap = {};
+      state.stats = { correct: 0, total: 0 };
+      saveProgress();
+      saveAccuracy();
+      renderStats();
+      renderWordCard();
+    }
+
+    function checkSpelling() {
+      const item = getCurrentWord();
+      if (!item) return;
+      const userValue = normalizeWord(el.spellingInput.value);
+      const correctValue = normalizeWord(item.word);
+      if (!userValue) {
+        setResult('warning', '请先输入单词', '可以先点“再听一遍”后再拼写。');
+        return;
+      }
+      state.stats.total += 1;
+      if (userValue === correctValue) {
+        state.stats.correct += 1;
+        saveAccuracy();
+        setResult('success', '拼写正确', `很好，${item.word} 的意思是“${item.meaning}”。`);
+        markWord('known');
+      } else {
+        saveAccuracy();
+        setResult('error', '拼写不正确', `正确答案是：${item.word}`);
+        markWord('review');
+      }
+      renderStats();
+    }
+
+    function showAnswer() {
+      const item = getCurrentWord();
+      if (!item) return;
+      el.spellingInput.value = item.word;
+      setResult('warning', '已显示答案', `请记住：${item.word} = ${item.meaning}`);
+      state.translationVisible = true;
+      renderWordCard();
+    }
+
+    function importCustomDeck() {
+      const raw = el.customDeckInput.value.trim();
+      if (!raw) {
+        alert('请先粘贴内容。');
+        return;
+      }
+      const lines = raw.split(/\n+/).map(line => line.trim()).filter(Boolean);
+      const items = [];
+      for (const line of lines) {
+        const parts = line.split('|').map(part => part.trim());
+        if (parts.length < 2) continue;
+        items.push({
+          word: parts[0],
+          meaning: parts[1],
+          pos: parts[2] || '—',
+          example: parts[3] || '暂无例句'
+        });
+      }
+      if (!items.length) {
+        alert('没有解析出有效词条，请按“单词 | 中文 | 词性 | 例句”的格式输入。');
+        return;
+      }
+      saveCustomDeck(items);
+      state.decks = getAllDecks();
+      state.activeDeckKey = 'custom';
+      state.currentIndex = 0;
+      localStorage.setItem(STORAGE_KEYS.activeDeck, 'custom');
+      renderAll();
+      alert(`导入成功，共 ${items.length} 个单词。`);
+    }
+
+    function clearCustomDeck() {
+      if (!confirm('确定删除自定义词库吗？')) return;
+      localStorage.removeItem(STORAGE_KEYS.customDeck);
+      if (state.activeDeckKey === 'custom') {
+        state.activeDeckKey = 'basics';
+        localStorage.setItem(STORAGE_KEYS.activeDeck, 'basics');
+      }
+      state.decks = getAllDecks();
+      ensureDeckKeyValid();
+      state.currentIndex = 0;
+      renderAll();
+    }
+
+    function escapeHtml(str) {
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
+    function bindEvents() {
+      el.deckSelect.addEventListener('change', () => {
+        state.activeDeckKey = el.deckSelect.value;
+        state.currentIndex = 0;
+        state.translationVisible = false;
+        localStorage.setItem(STORAGE_KEYS.activeDeck, state.activeDeckKey);
+        renderAll();
+      });
+
+      el.toggleMeaningBtn.addEventListener('click', () => {
+        state.translationVisible = !state.translationVisible;
+        renderWordCard();
+      });
+
+      el.pronounceBtn.addEventListener('click', () => {
+        const item = getCurrentWord();
+        if (item) speak(item.word);
+      });
+
+      el.knownBtn.addEventListener('click', () => {
+        markWord('known');
+        nextWord();
+      });
+
+      el.reviewBtn.addEventListener('click', () => {
+        markWord('review');
+        nextWord();
+      });
+
+      el.nextBtn.addEventListener('click', nextWord);
+      el.shuffleBtn.addEventListener('click', shuffleDeck);
+      el.resetProgressBtn.addEventListener('click', resetProgress);
+
+      el.flashcardModeBtn.addEventListener('click', () => switchMode('flashcard'));
+      el.spellingModeBtn.addEventListener('click', () => switchMode('spelling'));
+
+      el.checkSpellingBtn.addEventListener('click', checkSpelling);
+      el.showAnswerBtn.addEventListener('click', showAnswer);
+      el.playAgainBtn.addEventListener('click', () => {
+        const item = getCurrentWord();
+        if (item) speak(item.word);
+      });
+
+      el.spellingInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') checkSpelling();
+      });
+
+      el.rateRange.addEventListener('input', () => {
+        state.rate = Number(el.rateRange.value);
+        el.rateValue.value = state.rate.toFixed(1);
+        localStorage.setItem(STORAGE_KEYS.rate, String(state.rate));
+      });
+
+      el.importDeckBtn.addEventListener('click', importCustomDeck);
+      el.clearCustomDeckBtn.addEventListener('click', clearCustomDeck);
+    }
+
+    function renderAll() {
+      state.decks = getAllDecks();
+      ensureDeckKeyValid();
+      renderDeckOptions();
+      renderDeckPreview();
+      renderStats();
+      renderWordCard();
+      switchMode(state.mode);
+      el.rateRange.value = String(state.rate);
+      el.rateValue.value = state.rate.toFixed(1);
+    }
+
+    function initSpeech() {
+      if (!('speechSynthesis' in window)) return;
+      pickSpanishVoice();
+      if (typeof speechSynthesis.onvoiceschanged !== 'undefined') {
+        speechSynthesis.onvoiceschanged = pickSpanishVoice;
+      }
+    }
+
+    function init() {
+      bindEvents();
+      initSpeech();
+      renderAll();
+    }
+
+    init();
+  </script>
+</body>
+</html>

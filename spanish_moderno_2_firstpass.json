@@ -1,0 +1,519 @@
+{
+  "book": 2,
+  "title": "现代西班牙语 学生用书 2",
+  "note": "Partial OCR first pass from uploaded PDF. Currently includes units 1-4. Some entries may need spot-checking.",
+  "units": [
+    {
+      "unit": 1,
+      "source_pdf_pages": [
+        19,
+        20
+      ],
+      "vocabulary": [
+        {
+          "word": "noviembre",
+          "pos": "m.",
+          "meaning": "十 一 月"
+        },
+        {
+          "word": "rapidez",
+          "pos": "",
+          "meaning": "下 快 ， 迅 速"
+        },
+        {
+          "word": "simple",
+          "pos": "adj.",
+          "meaning": "简单 的"
+        },
+        {
+          "word": "de pie",
+          "pos": "loc.adp.",
+          "meaning": "站 着"
+        },
+        {
+          "word": "único, ca",
+          "pos": "adj.",
+          "meaning": "唯一 的 ; modo m. 方式"
+        },
+        {
+          "word": "cuanto antes",
+          "pos": "loc.adv.",
+          "meaning": "尽快 ， 尽 早 8 parar triint EE; 停 下 ， 止 步 : dkcimo, ma adj..num. 第 十"
+        },
+        {
+          "word": "delante adv.",
+          "pos": "",
+          "meaning": "前 面"
+        },
+        {
+          "word": "timbre",
+          "pos": "m.",
+          "meaning": "铃"
+        },
+        {
+          "word": "adelante interj.",
+          "pos": "",
+          "meaning": "请 进 ! ¡ jefe, fa m.f.. 头 儿 ， 长"
+        },
+        {
+          "word": "asiento",
+          "pos": "m.",
+          "meaning": "座位"
+        },
+        {
+          "word": "tren",
+          "pos": "m.",
+          "meaning": "火车"
+        },
+        {
+          "word": "afueras fpl.",
+          "pos": "",
+          "meaning": "郊外"
+        },
+        {
+          "word": "cartera",
+          "pos": "f",
+          "meaning": "手提 包"
+        },
+        {
+          "word": "asistente, ta m.f..",
+          "pos": "",
+          "meaning": "助理 ; 家 庭 服务 员"
+        },
+        {
+          "word": "atoda carrera",
+          "pos": "loc.adv.",
+          "meaning": "飞快 地"
+        },
+        {
+          "word": "asistir triintr RSE",
+          "pos": "",
+          "meaning": "出 席"
+        },
+        {
+          "word": "nocturno, na",
+          "pos": "adj.",
+          "meaning": "夜间 的"
+        },
+        {
+          "word": "sobresaliente",
+          "pos": "adj.",
+          "meaning": "突出 的"
+        },
+        {
+          "word": "excelente",
+          "pos": "adj.",
+          "meaning": "优秀 的"
+        },
+        {
+          "word": "sábado",
+          "pos": "m.",
+          "meaning": "星期 六"
+        },
+        {
+          "word": "contestar",
+          "pos": "tr.",
+          "meaning": "回答"
+        },
+        {
+          "word": "mejor dicho",
+          "pos": "loc.ado.",
+          "meaning": "确切 地 说"
+        },
+        {
+          "word": "complicado, da",
+          "pos": "adj.",
+          "meaning": "复杂 的"
+        },
+        {
+          "word": "madrugador, ra ad).",
+          "pos": "",
+          "meaning": "早起 的"
+        },
+        {
+          "word": "cierto, ta",
+          "pos": "adj.",
+          "meaning": "确定 的 ;imprevisto, ta p.p. 突 发 的 ， 没 想到 的"
+        },
+        {
+          "word": "tampoco adv.",
+          "pos": "",
+          "meaning": "也 不"
+        },
+        {
+          "word": "sencillo, lla",
+          "pos": "adj.",
+          "meaning": "简单 的 9 vagón m. 车 厢"
+        },
+        {
+          "word": "alo mejor",
+          "pos": "loc.adv.",
+          "meaning": "或许"
+        },
+        {
+          "word": "febrero",
+          "pos": "m.",
+          "meaning": "二 月"
+        },
+        {
+          "word": "marzo",
+          "pos": "m.",
+          "meaning": "至 ¡abril m. 四 月"
+        },
+        {
+          "word": "mayo",
+          "pos": "m.",
+          "meaning": "五 月"
+        }
+      ],
+      "additional": [
+        {
+          "word": "lunes",
+          "pos": "m.",
+          "meaning": "星期 一"
+        },
+        {
+          "word": "martes",
+          "pos": "m.",
+          "meaning": "星期 二"
+        },
+        {
+          "word": "miércoles",
+          "pos": "m.",
+          "meaning": "星期 三"
+        },
+        {
+          "word": "jueves",
+          "pos": "m.",
+          "meaning": "星期 四"
+        },
+        {
+          "word": "wviarnac ER",
+          "pos": "",
+          "meaning": "二 1"
+        }
+      ],
+      "raw_ocr": {
+        "page1_left": "cuando te llamé en la noct\nPedro: Es muy sencillo: cansado:\nlos vagones y como no la\nlo mejor venía\" en el últin\n\nPaulina: Ya entiendo: los dos os qu\n\n13\nh E\nO VOCABULARIO\n\na!\n\n— A\n==\n, Atareado, da p.p. 忙碌 的\nnoviermbre m. 十 一 月\n\ndespertarse prni. Ex\n¡ vestirse pral. 穿 衣 服\n| asearse prni. 洗 汶\nrapidez 下 快 ， 迅 速\ndesayuno m. EE\nsimple adj. 简单 的\nde pie loc.adp. 站 着\n\nD venia 是 venir 的 陈述 式 过 去 未 完成 时 。\n",
+        "page1_right": "che.\nlos de esperar a nuestra prima, decidimos buscarla en\nla encontramos en ninguno, entonces pensamos que a\n\ntimo tren de la noche...\n\nquedasteis ahí esperando en la estación toda la noche.\n\núnico, ca adj. 唯一 的\n\n; modo m. 方式\n\ncuanto antes loc.adv. 尽快 ， 尽 早\n\n8 parar triint EE; 停 下 ， 止 步\n: dkcimo, ma adj..num. 第 十\n\ndelante ado. 前 面\n\ntimbre m. 铃\n\nadelante interj. 请 进 !\n\n¡ jefe, fa m..f. 头 儿 ， 长\n\nasiento m. 座位\n\nexamen\n",
+        "page2_left": "“UI VELA HA y —<—ilil 1\n\ntren m. 火车\n\nafueras fpl. 郊外\ncartera f 手提 包\nasistente, ta m..f. 助理 ; 家 庭 服务 员\nlabor f Tf, 55)L\natoda carrera  loc.adv. 飞快 地\nasistir triintr RSE; 出 席\nnocturno, na adj. 夜间 的\nsobresaliente adj. 突出 的\nexcelente adj. 优秀 的\nnota f 125, $5; 28\nsábado m. 星期 六\ncontestar tr. 回答\n\n补充 词汇 PALAB\nlunes m. 星期 一\nmartes m. 星期 二\nmiércoles m. 星期 三\njueves m. 星期 四\n\nwviarnac ER 二 1\n",
+        "page2_right": "' recordar tr. 想起 ， 使 想起\n\n| ausente adj. 缺席 ， 不 在\nmejor dicho loc.ado. 确切 地 说\ncomplicado, da adj. 复杂 的\n\nA | madrugar intr. 早起\n¡remedio m. 办 法 ; 药剂\nmadrugador, ra ad). 早起 的\ncierto, ta adj. 确定 的\n;imprevisto, ta  p.p. 突 发 的 ， 没 想到 的\ntampoco adb. 也 不\nsencillo, lla adj. 简单 的\n\n9 vagón m. 车 厢\nalo mejor loc.adv. 或许\n\nBRAS ADICIONALES\nfebrero m. 二 月\nmarzo m. 至\n¡abril m. 四 月\nmayo m. 五 月\n\n' A A Proa o ER\n"
+      }
+    },
+    {
+      "unit": 2,
+      "source_pdf_pages": [
+        35,
+        36
+      ],
+      "vocabulary": [
+        {
+          "word": "intenso, sa",
+          "pos": "adj.",
+          "meaning": "密集 的 ， 紧 张 的 aparte de loc.adv. 在 -之 外 ，funcin F 功能 ; 演出 cine m. 电影 ; 影院 teatro m. BJ; 戏剧"
+        },
+        {
+          "word": "concierto ra.",
+          "pos": "",
+          "meaning": "音乐 会 recital m. 朗诵 会 ，( 独奏 ， 独唱 ) 音乐 会 poesía 上 诗歌"
+        },
+        {
+          "word": "serie",
+          "pos": "f",
+          "meaning": "系列"
+        },
+        {
+          "word": "actividad",
+          "pos": "",
+          "meaning": "上 活动"
+        },
+        {
+          "word": "índole",
+          "pos": "f",
+          "meaning": "性 质"
+        },
+        {
+          "word": "atractivo, va",
+          "pos": "adj.",
+          "meaning": "吸引 人 的"
+        },
+        {
+          "word": "conferencia",
+          "pos": "",
+          "meaning": "大 报告 会 ， 讲 座"
+        },
+        {
+          "word": "economía",
+          "pos": "f",
+          "meaning": "经 济"
+        },
+        {
+          "word": "literatura",
+          "pos": "",
+          "meaning": "下 文学"
+        },
+        {
+          "word": "filosofía",
+          "pos": "",
+          "meaning": "下 哲学 formativo, va adj. 培养 成 才 的 加 .rs"
+        },
+        {
+          "word": "ejercicio",
+          "pos": "m.",
+          "meaning": "练习 : oído m. 听觉 ; HA 。 ; superior adj. 高 级 的 ' incluso adv. 甚至 ! discutir intr. 讨论 1 extranjero,ra adj. 外 国 的 ¡ doble adj. 双重 的 ! valor m. 价值"
+        },
+        {
+          "word": "nivel",
+          "pos": "m.",
+          "meaning": "水 平"
+        },
+        {
+          "word": "culto, ta",
+          "pos": "adj.",
+          "meaning": "文雅 的"
+        },
+        {
+          "word": "lástima",
+          "pos": "f",
+          "meaning": "遗憾"
+        },
+        {
+          "word": "ciclo",
+          "pos": "m.",
+          "meaning": "周期 ; 系列"
+        },
+        {
+          "word": "similar",
+          "pos": "adj.",
+          "meaning": "相似 的"
+        },
+        {
+          "word": "social",
+          "pos": "adj.",
+          "meaning": "社会 ¡ desde luego loc.adv. 当然 ， 自 然 ， apunte m. 笔记 1 cuaderno m. 练习 本 ， darse prisa 赶紧 ， 赶 快"
+        },
+        {
+          "word": "diafestivo",
+          "pos": "",
+          "meaning": "节日"
+        },
+        {
+          "word": "vacación A",
+          "pos": "",
+          "meaning": "假期 1 Año Nuevo 新 年 : el Día Internacional del Trabajo 国际 劳动 节 ; el Día Internacional de la Mujer 国际 妇女 节"
+        }
+      ],
+      "additional": [
+        {
+          "word": "diciembre",
+          "pos": "m.",
+          "meaning": "十 二 月 calendario m. 日历"
+        }
+      ],
+      "raw_ocr": {
+        "page1_left": "OR\n(O VOCABULARIO\n\nintenso, sa adj. 密集 的 ， 紧 张 的\n\n| aparte de loc.ado. 在 -之 外\n\n，funcin F 功能 ; 演出\n\n| cine m. 电影 ; 影院\n\n| teatro m. BJ; 戏剧\nconcierto ra. 音乐 会\n\n”recital m. 朗诵 会 ，( 独奏 ，\n\n| 独唱 ) 音乐 会\n\n| poesía 上 诗歌\nserie f 系列\nactividad 上 活动\nacadémico, ca adj. FAN\níndole f 性 质\natractivo, va adj. 吸引 人 的\nconferencia 大 报告 会 ， 讲 座\neconomía f 经 济\nliteratura 下 文学\nfilosofía 下 哲学\n\n| formativo, va adj. 培养 成 才 的\n\n，Ssumamente adv. BR, +9\n\n1\n\n加 .rs\nO sabía 是 动词 saber 的 陈述 式 过 去 未 完成 时 变 位 。\nD llegaremos 是 动词 ltegar 的 将 来 来 完成 时 变 位 。\n",
+        "page1_right": "exigir\n\n的 ;minimo, ma adj. 最 小 的 |\n: dominio m. 掌握 |\n， idioma m. 语言 |\n: postgrado m. 研究 生 教育 |\n! tercero, ra adj.;pron. 第 三\n' cuarto, ta adj.;pron. 第 四 |\n\n， asistente, ta m.f. 参加 者 ]\n; dificultad f 困难\n: explicación f 解释\n， desalentado, da p.p. ¡BE |\n' amal loc.adp。 (课文 中 ) 泄气 |\nejercicio m. 练习 |\n: oído m. 听觉 ; HA 。\n; superior adj. 高 级 的\n' incluso adv. 甚至 |\n! discutir intr. 讨论\n1 extranjero,ra adj. 外 国 的\n¡ doble adj. 双重 的\n! valor m. 价值\n\nhispánico, ca\n",
+        "page2_left": "909 9), WM” Pa PUE -.\n\npa a\n- proporcionar\n\nnivel m. 水 平\nculto, ta adj. 文雅 的\n\nlástima f 遗憾\nlamentar tr. ARTIE\nciclo m. 周期 ; 系列\n\nsimilar adj. 相似 的\n\n补充 词汇 PALABRF\n| julio m. 七 月\n| agosto m. NA\n- septiembre m. AA\n- octubre m. 十 月\ndiciembre m. 十 二 月\n| calendario m. 日历\n\n不 规则 动词 VERBOS IRREGULARES\n\npedir: Se conjuga como servir.\n\ne VERBOS C\n\n",
+        "page2_right": "' apurado, da adj. 急促 的 ; 窘迫 的\n\n， academia f 学 院\n\n' ciencia f 科学\n\nsocial adj. 社会\n\n¡ desde luego loc.ado. 当然 ， 自 然\n， apunte m. 笔记\n\n1 cuaderno m. 练习 本\n\n， darse prisa 赶紧 ， 赶 快\n\n3RAS ADICIONALES\n\ndiafestivo 节日\nvacación A 假期\n\n1 Año Nuevo 新 年\n\n: el Día Internacional del Trabajo ”国际 劳动 节\n; el Día Internacional de la Mujer ”国际 妇女 节\n\nseguir: Se conjuga como servir.\n\nCON CAMBIOS ORTOGRÁFICOS EN ALGUNAS\n\n"
+      }
+    },
+    {
+      "unit": 3,
+      "source_pdf_pages": [
+        53,
+        54
+      ],
+      "vocabulary": [
+        {
+          "word": "IICA",
+          "pos": "",
+          "meaning": "子 十 由 下 一 3 一 3 词汇 表 一 二 一 一"
+        },
+        {
+          "word": "atasco",
+          "pos": "m.",
+          "meaning": "堵塞 anteayer adv. 前 天 coche m.(Esp.) 轿车 ( 西班牙 ) garaje m. 车 库 ponerse en camino 上 路 producir(se) tr.;prnl. 产生 terrible adj. 可 怕 的 - espera f 等 待 durar intr. 持续 aparcar tr(Esp.) 泊 车 (西班牙 ) - túnel m. 地 道"
+        },
+        {
+          "word": "anden",
+          "pos": "m.",
+          "meaning": "站 台 aparecer intr. 出 现"
+        },
+        {
+          "word": "de repente",
+          "pos": "loc.adb.",
+          "meaning": "突然 avisar tr. 通知 a causa de loc.adv. 因为 avería f 故障 ， 损 伤 adelante adv. 向 前 preciso, sa adj. 必须 ; 精确 的 - cola a (购物 等 ) 排 的 队 largo, ga ad). 长 的"
+        },
+        {
+          "word": "mn",
+          "pos": "",
+          "meaning": "一 一 一 , dispuesto,ta p.p. 准备 1 solo, la ad). 单独 的 上 disculpa É 抱歉"
+        },
+        {
+          "word": "culpa",
+          "pos": "",
+          "meaning": "下 过 失 ， 错 误 ， abrazar(se) tr.prni. 拥抱 ¡reír intr. 笑 ' silencio m. 沉默 ， 无 声 ' testigo m. 证 人 : esquina f 拐角 ¡entablar tr. 开始 〈 某 种 活动 ) : siguiente ad). 下 一 个 ¡diálogo m. 对 话 : serio, ria adj. 严重 的 ; 严肃 的 ¡ tráfico m. (市 内 ) 交通 ' distrito m. 区"
+        },
+        {
+          "word": "rural ad).",
+          "pos": "",
+          "meaning": "农村 的 ; autopista E 高 速 公路 ; conectar tr. 连接 ¡accidente m. 事故 : muerto, ta adj.-s. 死 的 ; HA, HE ' herido, da adj.-s. 受伤 的 ; 伤员"
+        },
+        {
+          "word": "Ai ambulancia pa",
+          "pos": "",
+          "meaning": "救护 车 ¡tardar intr. 耽搁"
+        }
+      ],
+      "additional": [],
+      "raw_ocr": {
+        "page1_left": "a A a\n\nJoaquín: Lo sé, pero sé también\nes muy buena.\n\nGabriel: — Sí, pero precisamente |\nel tráfico por más de ur\n\nJoaquín: Supongo que no hubo 1\n\nGabriel: ¿Quién dice que no hi\nheridos. Lo malo fue <\nmuertos y los heridos?\n\nJoaquín: —Tuviste, entonces, una\na tiempo a la fiesta.\n\nGabriel: Pude, pero me llevaron\n\n加\n也 过 去 分 词 的 绝对 结构 ， 相 当 于 一 个 时 间 从 名 : Cuande\n",
+        "page1_right": "sn que la autopista que conecta tu distrito con la ciudad\n\ne en ella se produjo un terrible accidente que paralizó\nuna hora.\n\no muertos, pero ¿hubo heridos?\n\nhubo muertos? Hubo por lo menos cinco, y muchos\n> que las ambulancias tardaron en llegar. Llevados los\nla policía abrió el tráfico.\n\nia hora de retraso. Una hora no es nada. Pudiste llegar\n\non de testigo a la comisaría.\n\nndo se llevaron a los muertos y heridos...\n",
+        "page2_left": "IICA 子 十 由 下 一\n\n3 一 3\n词汇 表\n0 VOCABULARIO\n\n一 二 一\n一\n\natasco m. 堵塞\n| anteayer adv. 前 天\n| coche m.(Esp.) 轿车 ( 西班牙 )\n| garaje m. 车 库\n| ponerse en camino 上 路\n| producir(se) tr.;prnl. 产生\n| terrible adj. 可 怕 的\n- espera f 等 待\n| durar intr. 持续\n| aparcar tr(Esp.) 泊 车 (西班牙 )\n- túnel m. 地 道\nanden m. 站 台\n| aparecer intr. 出 现\nde repente loc.adb. 突然\n| avisar tr. 通知\n| a causa de loc.adv. 因为\n| avería f 故障 ， 损 伤\n| adelante adb. 向 前\n| preciso, sa adj. 必须 ; 精确 的\n- pasajero, ra mf. RE\n- cola a (购物 等 ) 排 的 队\n\n| largo, ga ad). 长 的\n",
+        "page2_right": "mn 一 一 一\n\n, dispuesto,ta  p.p. 准备\n\n1 solo, la ad). 单独 的\n\n上 disculpa É 抱歉\n\nculpa 下 过 失 ， 错 误\n\n， abrazar(se) tr.prni. 拥抱\n\n¡reír intr. 笑\n\n' silencio m. 沉默 ， 无 声\n\n' testigo m. 证 人\n\n: esquina f 拐角\n\n¡entablar tr. 开始 〈 某 种 活动 )\n\n: siguiente ad). 下 一 个\n\n¡diálogo m. 对 话\n\n: serio, ria adj. 严重 的 ; 严肃 的\n\n¡ tráfico m. (市 内 ) 交通\n\n' distrito m. 区\n\nrural ad). 农村 的\n\n; autopista E 高 速 公路\n\n; conectar tr. 连接\n\n¡accidente m. 事故\n\n' paralizar tr. (ENE\n\n: muerto, ta adj.-s. 死 的 ; HA, HE\n\n' herido, da adj.-s. 受伤 的 ; 伤员\nAi ambulancia pa 救护 车\n\n¡tardar intr. 耽搁\n"
+      }
+    },
+    {
+      "unit": 4,
+      "source_pdf_pages": [
+        71,
+        72
+      ],
+      "vocabulary": [
+        {
+          "word": "infancia",
+          "pos": "",
+          "meaning": "童年"
+        },
+        {
+          "word": "campesino,na m.f..",
+          "pos": "",
+          "meaning": "农民"
+        },
+        {
+          "word": "planta",
+          "pos": "f",
+          "meaning": "楼 层 ; 植物"
+        },
+        {
+          "word": "delantero, ra",
+          "pos": "adj.",
+          "meaning": "前 面 的"
+        },
+        {
+          "word": "patio",
+          "pos": "m.",
+          "meaning": "院子"
+        },
+        {
+          "word": "huerto",
+          "pos": "m.",
+          "meaning": "园子"
+        },
+        {
+          "word": "cultivar",
+          "pos": "tr.",
+          "meaning": "种 植"
+        },
+        {
+          "word": "hortaliza",
+          "pos": "",
+          "meaning": "大 ( 种 在 园子 里 的 ) is"
+        },
+        {
+          "word": "sol",
+          "pos": "m.",
+          "meaning": "太阳"
+        },
+        {
+          "word": "fuente",
+          "pos": "",
+          "meaning": "请 泉 ， 喷 泉"
+        },
+        {
+          "word": "fijamente",
+          "pos": "adv.",
+          "meaning": "目不转睛"
+        },
+        {
+          "word": "apagado, da",
+          "pos": "p.p.",
+          "meaning": "轻柔 的 ( 嗓音 )"
+        },
+        {
+          "word": "chiste",
+          "pos": "m.",
+          "meaning": "笑话"
+        },
+        {
+          "word": "río",
+          "pos": "m.",
+          "meaning": "河"
+        },
+        {
+          "word": "parcela je (",
+          "pos": "",
+          "meaning": "一 小 块 ) 田地"
+        },
+        {
+          "word": "plaza",
+          "pos": "f",
+          "meaning": "广场"
+        },
+        {
+          "word": "nadar",
+          "pos": "intr.",
+          "meaning": "游泳"
+        },
+        {
+          "word": "bosque",
+          "pos": "m.",
+          "meaning": "森林"
+        },
+        {
+          "word": "atardecer intrim.",
+          "pos": "",
+          "meaning": "黄昏 降临 ; 黄昏"
+        },
+        {
+          "word": "al día siguiente",
+          "pos": "loc.adv.",
+          "meaning": "次 日 ， 第 二 天"
+        },
+        {
+          "word": "hostal",
+          "pos": "m.",
+          "meaning": "客 店"
+        },
+        {
+          "word": "apartamento m.lAmer.)",
+          "pos": "",
+          "meaning": "民居 公寓 ; 单元 房 (拉美 )"
+        },
+        {
+          "word": "alquiler",
+          "pos": "m.",
+          "meaning": "房租 entre prep. 在 …… 之 间 ' permitir tr. 允许"
+        },
+        {
+          "word": "raza",
+          "pos": "f",
+          "meaning": "种 族 ， 人 种 ; mestizo, za adj.-s. Ri 印 欧 混 ' mulato, ta mf: 黑白 混血 人 } asiático, ca adj.-s. 亚洲 的 ; 亚洲 人 : funcionar intr. 运转"
+        }
+      ],
+      "additional": [],
+      "raw_ocr": {
+        "page1_left": "ms do” as against\n\npues allí se alojaban jóvene\nmulatos, asiáticos...\nFernando: ¡Qué experiencia tan inter\nmayor? ¿Tenia horarios ríg;\nFelipe: Sí, por supuesto. Sus hora:\nse servía entre las siete y r\nlo perdías. Para estar seg\nlas nueve. El almuerzo se\nhorario de la cena era entre\npodíamos salir a la calle ;\nmadrugada.\nFernando: ¿Sabes lo que pienso? Que\nvida de un estudiante: la di:\n",
+        "page1_right": "o O o a a a\n\nnes de casi todas las razas: blancos, negros, mestizos,\n\nteresante! Pero, dime, ¿cómo funcionaba el colegio\nígidos?\n\nrarios eran muy rigurosos. Por ejemplo, el desayuno\ny media y las nueve. Si llegabas fuera de estas horas,\nguro, tenías que levantarte, por lo menos, antes de\ne servía a partir de las dos hasta las tres y media. El\ntre las nueve y las diez de la noche. Después de eso,\n\ne pero teníamos que regresar antes de la una de la\n\nue un horario así obliga a tener algo importante en la\ndisciplina.\n",
+        "page2_left": "HICATIZTTS FMRE\n\n4-3\n词汇 表\nO VOCABULARIO\n\ninfancia 童年\ncampesino,na  m..f. 农民\n\nsolo, la adj. Ay BAP\nplanta f 楼 层 ; 植物\ndelantero, ra adj. 前 面 的\n\npatio m. 院子\n\nhuerto m. 园子\n\ncultivar tr. 种 植\n\nhortaliza 大 ( 种 在 园子 里 的 ) is\nsol m. 太阳\n\nfuente 请 泉 ， 喷 泉\nfijamente adv. 目不转睛\napagado, da p.p. 轻柔 的 ( 嗓音 )\nchiste m. 笑话\n\norilla f FU\n\nrío m. 河\n\nparcela je (一 小 块 ) 田地\ntrigo m. INE\n\nplaza f 广场\n\nnadar intr. 游泳\n\nbosque m. 森林\natardecer intrim. ”黄昏 降临 ; 黄昏\n\nal día siguiente  loc.adv. 次 日 ， 第 二 天\n",
+        "page2_right": ": entero, ra adj. 整个 的 ， 全 部 的 ，\n完整 的\n\n， alojarse prnl. 住宿\n\n; alojamiento m. 住处\n\n: conveniente ad). 合适 的\n\n: colegio mayor (Rsp.) 学 生 公寓 ( 西班牙 )\n\n; especie f 种 类\n\nhostal m. 客 店\n\napartamento m.lAmer.) 民居 公寓 ; 单元 房\n| (拉美 )\n\n' compartir tr. HS\n\nalquiler m. 房租\n\n¡repartir tr, DIE\n\n| entre prep. 在 …… 之 间\n\n' permitir tr. 允许\n\n' ambiente m. Sá, AE\n\nraza f 种 族 ， 人 种\n\n¡ blanco, ca m..f. BA\n\n1 negro, ra adj.-s. — HB ZA\n\n; mestizo, za adj.-s. Ri 印 欧 混\n\n' mulato, ta mf: 黑白 混血 人\n} asiático, ca adj.-s. 亚洲 的 ; 亚洲 人\n: funcionar intr. 运转\n"
+      }
+    }
+  ],
+  "extracted_units": [
+    1,
+    2,
+    3,
+    4
+  ]
+}

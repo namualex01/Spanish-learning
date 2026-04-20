@@ -1,0 +1,727 @@
+{
+  "book": 3,
+  "title": "现代西班牙语 学生用书 3",
+  "note": "Partial OCR first pass from uploaded PDF. Currently includes units 1-4. Some entries may need spot-checking.",
+  "units": [
+    {
+      "unit": 1,
+      "source_pdf_pages": [
+        22,
+        23
+      ],
+      "vocabulary": [
+        {
+          "word": "maravilloso, sa",
+          "pos": "adj.",
+          "meaning": "极 好 的 ， 神 奇 的 pícaro, ra m.,f. 无 赖 ， 混 混 儿"
+        },
+        {
+          "word": "fabricar",
+          "pos": "tr.",
+          "meaning": "制造"
+        },
+        {
+          "word": "mandar",
+          "pos": "tr.",
+          "meaning": "命令 ， 派"
+        },
+        {
+          "word": "naturaleza É e",
+          "pos": "",
+          "meaning": "性 质 ; 自然 fantistico, ca ad). 神奇 的"
+        },
+        {
+          "word": "burlador, ra adj.-s. MFFAGO",
+          "pos": "",
+          "meaning": "骗子 lana $ 羊毛"
+        },
+        {
+          "word": "hilo",
+          "pos": "m.",
+          "meaning": "线 monarca o má AE, 国王 conceder tr, 给 予"
+        },
+        {
+          "word": "orden",
+          "pos": "",
+          "meaning": "大 命"
+        },
+        {
+          "word": "suculento, ta",
+          "pos": "adj.",
+          "meaning": "鲜美 的"
+        },
+        {
+          "word": "alcabode ==",
+          "pos": "",
+          "meaning": "之 后"
+        },
+        {
+          "word": "cortesano, na adj.-s.",
+          "pos": "",
+          "meaning": "宫廷 的 ; 朝臣"
+        },
+        {
+          "word": "efusión É",
+          "pos": "",
+          "meaning": "欢快 ,热忱"
+        },
+        {
+          "word": "telar",
+          "pos": "m.",
+          "meaning": "织 机 incomparable ad). 无 可 比拟 的"
+        },
+        {
+          "word": "ante prep.",
+          "pos": "",
+          "meaning": "在 … 面 前 honrado, da ad). 诚实 的 ， 正 直 的 tejer tr. 织 viento en popa 一 帆 风 顺 \"confeccionar tr. 制作"
+        },
+        {
+          "word": "traje",
+          "pos": "m.",
+          "meaning": "服装 Su Majestad 陛下"
+        },
+        {
+          "word": "sefialar",
+          "pos": "tr.",
+          "meaning": "指 着 ; 指出 ¡ precioso, sa adj. 宝贵 的 ， 精 美的 ' remirar intr. 反复 看 ! asustar(se) tr;prnl. 使 害怕 ; 害怕 ， callar(se) trisintr.; 使 沉默 ; 沉默 ; ¡tela f. 布料"
+        },
+        {
+          "word": "a gritos",
+          "pos": "",
+          "meaning": "大 喊 大 叫 ; finalmente adv. 最 后 ， 最 终 enojado, da ad). 愤怒 的"
+        },
+        {
+          "word": "ordenar",
+          "pos": "tr.",
+          "meaning": "命令 ， criado, da mf 仆人， 侍从 上 kilómetro m. 公里"
+        },
+        {
+          "word": "dinero",
+          "pos": "m.",
+          "meaning": "钱 ， prosista 7 大 散文 家"
+        },
+        {
+          "word": "pleno, na",
+          "pos": "adj.",
+          "meaning": "满 的 ， 完 整 的 : conciencia 天 意识 ， 觉 司"
+        },
+        {
+          "word": "oficio",
+          "pos": "m.",
+          "meaning": "行当 : responsabilidad 大 责任 1 corto, ta ad). 短"
+        },
+        {
+          "word": "educación",
+          "pos": "f",
+          "meaning": "教育 ; poralgo 有 缘由 的 ¡política É 政治 , 政策 ' batalla 大 战斗"
+        },
+        {
+          "word": "inocente . HER",
+          "pos": "",
+          "meaning": "天 真 的 惊恐 ， 害 怕"
+        }
+      ],
+      "additional": [
+        {
+          "word": "artesanía",
+          "pos": "",
+          "meaning": "大 手工 艺"
+        },
+        {
+          "word": "averiguación",
+          "pos": "f.",
+          "meaning": "调查"
+        }
+      ],
+      "raw_ocr": {
+        "page1_left": "(0 VOCABULARIO\n\n一 一 一\n| paño m. 了 呢绒， 布料\nmaravilloso, sa adj. 极 好 的 ， 神 奇 的\n| pícaro, ra m.,f. 无 赖 ， 混 混 儿\nfabricar tr. 制造\nladrón, na m..f. Mé, E\n| soberano, na m.f. 君主 ， 国 王\n| extraordinario, ria adj. 异常 的 ， 非 同一\n般 的\nmandar tr. 命令 ， 派\nnaturaleza É e 性 质 ; 自然\n| fantistico, ca ad). 神奇 的\nburlador, ra adj.-s. MFFAGO; 骗子\n| lana $ 羊毛\nhilo m. 线\n| monarca o má AE, 国王\n| conceder tr, 给 予\norden 大 命\nsuculento, ta adj. 鲜美 的\nalcabode == 之 后\ncortesano, na adj.-s. ”宫廷 的 ; 朝臣\n| averiguar tr. As,\nefusión É 欢快 ,热忱\ntelar m. 织 机\n“incomparable ad). 无 可 比拟 的\nante prep. ”在 … 面 前\n“honrado, da ad). 诚实 的 ， 正 直 的\n| palacio m. ER\n| tejer tr. 织\n| viento en popa 一 帆 风 顺\n| artesano, na mf  FI.%\n\"confeccionar tr. 制作\ntraje m. 服装\n| Su Majestad 陛下\n\n| 补充 词汇 PALABR\n\nartesanía 大 手工 艺\naveriguación f. 调查\n\nA dt e X ET\n",
+        "page1_right": "pa\nrm PE\nre\n\nsefialar tr. 指 着 ; 指出\n\n¡ precioso, sa adj. 宝贵 的 ， 精 美的\n¡dibujo m. as, AE\n\n' remirar intr. 反复 看\n\n! asustar(se) tr;prnl. 使 害怕 ; 害怕\n: reflexionar intrtr. RE, 58\n\n， callar(se) trisintr.; 使 沉默 ; 沉默 ;\n| prnl. 138\n\n: gobernante mf  Fa%\n\n2 montar intr.;tr. 3\n\n¡tela f. 布料\n\nA ; invisible adj. ”看 不 见 的 , 隐形 的\n\n上 desnudo, da adj. 裸体 的\n\n， cabalgadura 大 坐骑 ( 马 )\n\n上 refrse prmml， AX; 嘲笑\n¡inocencia f AE, ARAR\na gritos 大 喊 大 叫\n\n; finalmente adb. 最 后 ， 最 终\n\n| “enojado, da ad). 愤怒 的\nordenar tr. 命令\n\n， criado, da mf 仆人， 侍从\n\n: estafador, ra mf RF, YFARE\n上 kilómetro m. 公里\n\ndinero m. 钱\n\n， ”prosista 7 大 散文 家\npleno, na adj. 满 的 ， 完 整 的\n: conciencia 天 意识 ， 觉 司\noficio m. 行当\n\n: responsabilidad 大 责任\n\n1 corto, ta ad). 短\n\neducación f 教育\n\n; poralgo 有 缘由 的\n¡política É 政治 , 政策\n\n: participar intr. 325, 2M\n\n' batalla 大 战斗\n\nRAS ADICIONALES\n¡burlar tr. 4%\n\n' dibujar tr. 绘画\n\n",
+        "page2_left": "estafar\n\nfábrica\n不 规则 动词 VERBOS IRREGULARES\nproponer: Se conjuga como poner.\nreír: Se conjuga como sonreír.\nrequerir: Se conjuga como herir.\n\n变 位 中 有 书写 变化 的 动词 VERBOS CO\nCONJUGACIONES\n\naveriguar: presente del indicativo\naverigiié\naveriguaste\naveriguó\naveriguamos\naveriguasteis\n\naverionaron\n",
+        "page2_right": "fabricación\ninocente . HER; 天 真 的\n惊恐 ， 害 怕\n\nIN CAMBIOS OTORGRÁFICOS EN ALGUNAS\n\npresente del subjuntivo\naverigiie\naverigies\naverigie\naverigiemos\n. averigiiéis\n\naveriolien\n"
+      }
+    },
+    {
+      "unit": 2,
+      "source_pdf_pages": [
+        44,
+        45
+      ],
+      "vocabulary": [
+        {
+          "word": "premio",
+          "pos": "m.",
+          "meaning": "奖"
+        },
+        {
+          "word": "gordo, da",
+          "pos": "adj.",
+          "meaning": "胖 的"
+        },
+        {
+          "word": "premio -~",
+          "pos": "",
+          "meaning": "彩票 头 奖"
+        },
+        {
+          "word": "valerse",
+          "pos": "prnl.",
+          "meaning": "依靠 ， 借 助"
+        },
+        {
+          "word": "imedicamento",
+          "pos": "m.",
+          "meaning": "药物 desafortunadamente adv. 不 幸 地"
+        },
+        {
+          "word": "mitad",
+          "pos": "",
+          "meaning": "天 一 半 - pinchar tr. 扎 ， 扎 破"
+        },
+        {
+          "word": "rueda",
+          "pos": "f",
+          "meaning": "轮子"
+        },
+        {
+          "word": "ji desconocido, da adj.-s.",
+          "pos": "",
+          "meaning": "陌生 的 ; 陌生 人 - peso m. 比索 - propina f 小 费"
+        },
+        {
+          "word": "ij cordialmente",
+          "pos": "adv.",
+          "meaning": "亲热 地 ， 真 诚 地"
+        },
+        {
+          "word": "como si",
+          "pos": "loc.adv.",
+          "meaning": "仿佛， 好像"
+        },
+        {
+          "word": "vehículo",
+          "pos": "m.",
+          "meaning": "车 ， 运 载 工具 herramienta f 工具"
+        },
+        {
+          "word": "reparación",
+          "pos": "",
+          "meaning": "区 修理"
+        },
+        {
+          "word": "registrar",
+          "pos": "tr.",
+          "meaning": "搜查 ， 登 记 interior m. 内 部 ， 里 面"
+        },
+        {
+          "word": "inventario",
+          "pos": "m.",
+          "meaning": "清单"
+        },
+        {
+          "word": "r(se) tr.;prnl E",
+          "pos": "",
+          "meaning": "碰 到"
+        },
+        {
+          "word": "boleto",
+          "pos": "m.",
+          "meaning": "票 (拉美 ) [等 于 entrada"
+        },
+        {
+          "word": "billete, com",
+          "pos": "",
+          "meaning": "一"
+        },
+        {
+          "word": "probante",
+          "pos": "",
+          "meaning": "等 ]"
+        },
+        {
+          "word": "sorteo",
+          "pos": "m.",
+          "meaning": "抽签 ， 抽 奖"
+        },
+        {
+          "word": "imenudo, da",
+          "pos": "adj.",
+          "meaning": "细小 的 ; 好 一 人 corresponder intr. 符合 ， 对 应"
+        },
+        {
+          "word": "anuncio",
+          "pos": "m.",
+          "meaning": "广告 ， 告 示 convocar tr. 召集 sinvergiienza m.f.. 无 赖 ， 无 耻 的 人"
+        },
+        {
+          "word": "premiar",
+          "pos": "tr.",
+          "meaning": "奖励"
+        },
+        {
+          "word": "asombrarse",
+          "pos": "prnl.",
+          "meaning": "吃惊"
+        },
+        {
+          "word": "robar",
+          "pos": "tr.",
+          "meaning": "偷窃 : ganador, ra ad). 赢家 : agradecimiento 7m. 感谢 上 convertirse prnl. 变 为 ¡lágrima 关 眼泪"
+        },
+        {
+          "word": "suceso",
+          "pos": "m.",
+          "meaning": "事情 ， 事 件 extrañeza f 奇怪 ， 惊 异 ¡ en presenciade loc.adv. 当 …\" 面 上 ser m. A; 生物"
+        },
+        {
+          "word": "planeta",
+          "pos": "m.",
+          "meaning": "行星"
+        },
+        {
+          "word": "moral ad).",
+          "pos": "",
+          "meaning": "道德 的 ! depender intr. AT, 取决 于 ; ， 不 一 定 ， 看 情况 ; legal ad). 合法 的"
+        },
+        {
+          "word": "merecer",
+          "pos": "tr.",
+          "meaning": "值得 ， 配 得 上 ， castigo m. 惩罚 asesinato m. 杀人 罪行"
+        },
+        {
+          "word": "fraude",
+          "pos": "m.",
+          "meaning": "营私 舞弊 ; quebrantamiento mm. 破坏 ; 违反 ; condena 天 EN, HE, : 判决 ! teneren cuenta perifuerb. 考虑 到 ， 注 意 ¡denunciar tr. 报案 ， 揭 发"
+        },
+        {
+          "word": "cómplice m.f..",
+          "pos": "",
+          "meaning": "同伙 ¡ pérdida 天 EA; 损失 \"4 ocultar tr. 隐瞒 1 beneficiar(se) tr.;prnl. RAT; 受益 ¡delincuente mf. 罪犯 1， denuncia É 举报 ， 报 案 ¡devolución $ 归还"
+        },
+        {
+          "word": "en cambio loc.adv.",
+          "pos": "",
+          "meaning": "相反 言语 ' bien m. 善行"
+        },
+        {
+          "word": "Moi mal",
+          "pos": "m.",
+          "meaning": "恶 行 1 actuar intr. 行动 ， 表 现 : transformar(se) tr. 变 为 1 reflexión 前 思索 ， 思 考"
+        },
+        {
+          "word": "trasero, ra adi.",
+          "pos": "",
+          "meaning": "后 部 的"
+        }
+      ],
+      "additional": [
+        {
+          "word": "afortunadamente",
+          "pos": "adv.",
+          "meaning": "幸好 ， 幸 运 地 - asesinar tr. 杀害 - beneficio m. 利益 ， 利 润"
+        },
+        {
+          "word": "castigar",
+          "pos": "tr.",
+          "meaning": "惩罚"
+        },
+        {
+          "word": "condenar",
+          "pos": "tr.",
+          "meaning": "判处"
+        }
+      ],
+      "raw_ocr": {
+        "page1_left": "了 词汇 表\n( VOCABULARIO\n\ne\nA\ne\n\npremio m. 奖\ngordo, da adj. 胖 的\npremio -~ 彩票 头 奖\nvalerse prnl. 依靠 ， 借 助\nimedicamento m. 药物\n| desafortunadamente adb. 不 幸 地\nmitad 天 一 半\n- pinchar tr. 扎 ， 扎 破\nrueda f 轮子\nji desconocido, da  adj.-s. 陌生 的 ; 陌生 人\n- peso m. 比索\n- propina f 小 费\nij cordialmente adv. 亲热 地 ， 真 诚 地\ncomo si loc.adv. 仿佛， 好像\ndarse cuenta perif.verb. ¡E\nvehículo m. 车 ， 运 载 工具\n| herramienta f 工具\nreparación 区 修理\nregistrar tr. 搜查 ， 登 记\n| interior m. 内 部 ， 里 面\ninventario m. 清单\n- halla z » , ;\nr(se) tr.;prnl E 碰 到\nboleto m. 票 (拉美 )\n[等 于 entrada\nbillete, com 一\nprobante 等 ]\n- lotería f. ER\nsorteo m. 抽签 ， 抽 奖\nimenudo, da adj. 细小 的 ; 好 一\n人 |\n| corresponder intr. 符合 ， 对 应\nanuncio m. 广告 ， 告 示\n| convocar tr. 召集\n| sinvergiienza m..f. 无 赖 ， 无 耻 的 人\nreclamar tr. FE\npremiar tr. 奖励\nasombrarse prnl. 吃惊\n\n补充 词汇 PALABI\n\nafortunadamente adv. 幸好 ， 幸 运 地\n- asesinar tr. 杀害\n\n- beneficio m. 利益 ， 利 润\ncastigar tr. 惩罚\ncondenar tr. 判处\n",
+        "page1_right": "2 ADA ._.\n\nCSS\n\nrobar tr. 偷窃\n\n; no obstante loc.conj. FU, 74m\n: ganador, ra ad). 赢家\n: agradecimiento 7m. 感谢\n上 convertirse prnl. 变 为\n¡lágrima 关 眼泪\nsuceso m. 事情 ， 事 件\n| extrañeza f 奇怪 ， 惊 异\n¡ en presenciade  loc.adv. 当 …\" 面\n上 ser m. A; 生物\nplaneta m. 行星\nmoral ad). 道德 的\n! depender intr. AT, 取决 于 ;\n， 不 一 定 ， 看 情况\n; legal ad). 合法 的\n! robo m. (143\nmerecer tr. 值得 ， 配 得 上\n， castigo m. 惩罚\n| asesinato m. 杀人 罪行\nfraude m. 营私 舞弊\n; quebrantamiento mm. 破坏 ; 违反\n; condena 天 EN, HE,\n: 判决\n! teneren cuenta  perifuerb. 考虑 到 ， 注 意\n¡denunciar tr. 报案 ， 揭 发\ncómplice m..f. 同伙\n¡ pérdida 天 EA; 损失\n\"4 ocultar tr. 隐瞒\n1  beneficiar(se) tr.;prnl. RAT; 受益\n¡delincuente mf. 罪犯\n1， denuncia É 举报 ， 报 案\n¡devolución $ 归还\nen cambio loc.adv. ”相反\n| estupidez f. SENT AR\n| 言语\n' bien m. 善行\nMoi mal m. 恶 行\n1 actuar intr. 行动 ， 表 现\n: transformar(se) tr. 变 为\n1 reflexión 前 思索 ， 思 考\nBRAS ADICIONALES\n1 estúpido, da adj. SER\n: hallazgo m. 发 现\n; quebrantar m TE, FE\n\ntrasero, ra adi. 后 部 的\n",
+        "page2_left": "不 规则 动词 VERBOS IRREGULARES\n\nconvertir: Se conjuga como advertir.\n\nmerecer: Se conjuga como parecer.\n\n变 位 中 有 书写 变化 的 动词 VERBOS CON\n\nCONJUGACIONES\n\nactuar: Se conjuga como continuar.\ncastigar: Se conjuga como llegar.\nconvocar: Se conjuga como provocar.\n\nproteger: Se conjuga como coger.\n\n常用 词汇 例句 vocastos usuA\n\n|. darse cuenta 觉察， 发 现\n\n1. [Por qué esa gente nos mira con tanta\nE No me he dado cuenta de eso.\n2. ¿Te das cuenta de que el deportista premi\n",
+        "page2_right": "IN CAMBIOS ORTOGRÁFICOS EN ALGUNAS\n\na\n\nALGUNOS\nALES\n\nta extrañeza?\n\nmiado no ha mostrado mucha alegría?\n"
+      }
+    },
+    {
+      "unit": 3,
+      "source_pdf_pages": [
+        64,
+        65
+      ],
+      "vocabulary": [
+        {
+          "word": "desarrollar",
+          "pos": "tr.",
+          "meaning": "发 展"
+        },
+        {
+          "word": "civilización",
+          "pos": "f",
+          "meaning": "文明 invason ra m.,f. 侵略 者 - superioridad f 优势"
+        },
+        {
+          "word": "arma",
+          "pos": "",
+          "meaning": "天 武器"
+        },
+        {
+          "word": "estrategia",
+          "pos": "f.",
+          "meaning": "战略"
+        },
+        {
+          "word": "traición",
+          "pos": "f",
+          "meaning": "背叛"
+        },
+        {
+          "word": "Fi conquistar",
+          "pos": "tr.",
+          "meaning": "征服 - someter(se) tr;prni. 使 届 服 ; 屈服"
+        },
+        {
+          "word": "destruir",
+          "pos": "tr.",
+          "meaning": "破坏 ， 毁 坏"
+        },
+        {
+          "word": "enlo esencial",
+          "pos": "loc.adv.",
+          "meaning": "本 质 上 ， 基 本 上 político, ca adj.-s. 政治 的 ;政治 家"
+        },
+        {
+          "word": "he aquí",
+          "pos": "",
+          "meaning": "下 面 就 是 episodio -m. 轶 事"
+        },
+        {
+          "word": "denominar",
+          "pos": "tr.",
+          "meaning": "命名"
+        },
+        {
+          "word": "conquista",
+          "pos": "f",
+          "meaning": "征服"
+        },
+        {
+          "word": "emperador, atriz m.,f.",
+          "pos": "",
+          "meaning": "皇帝 ， 皇 后"
+        },
+        {
+          "word": "extraño, ña ad).",
+          "pos": "",
+          "meaning": "奇怪 的 - derribar tr. 推倒 temor m. 害怕 permanecer intr. 处 在 ， 保 持 …… 状 态"
+        },
+        {
+          "word": "sereno, na",
+          "pos": "adj.",
+          "meaning": "镇 静 的 visitante m.,f. 来 访 者"
+        },
+        {
+          "word": "mensajero, ra m.f..",
+          "pos": "",
+          "meaning": "使 者 ， 送 信人 porcompleto loc.adv. 完全 ， 彻 底 señal f 言 号"
+        },
+        {
+          "word": "vencer",
+          "pos": "tr.",
+          "meaning": "战胜 verse obligado a perifverb. 被 迫"
+        },
+        {
+          "word": "trampa £",
+          "pos": "",
+          "meaning": "陷阱"
+        },
+        {
+          "word": "invitaci6n",
+          "pos": "f",
+          "meaning": "邀请 ， 邀 请 函"
+        },
+        {
+          "word": "invadir",
+          "pos": "tr.",
+          "meaning": "侵略"
+        },
+        {
+          "word": "firme",
+          "pos": "adj.",
+          "meaning": "坚定 的 专 有 名 词 NOME"
+        },
+        {
+          "word": "Hernando de Soto TES",
+          "pos": "",
+          "meaning": "德 索 托"
+        },
+        {
+          "word": "desierto, ta ad).",
+          "pos": "",
+          "meaning": "荒 无 人 烟 的"
+        },
+        {
+          "word": "al encuentro de",
+          "pos": "loc.adv.",
+          "meaning": "迎面"
+        },
+        {
+          "word": "hacer prisionero _perifuerb，",
+          "pos": "",
+          "meaning": "俘 瞄"
+        },
+        {
+          "word": "establecerse",
+          "pos": "prnl.",
+          "meaning": "定居"
+        },
+        {
+          "word": "Nuevo Mundo",
+          "pos": "",
+          "meaning": "新 世界 ， 新 大 陆"
+        },
+        {
+          "word": "ley",
+          "pos": "",
+          "meaning": "天 法 律"
+        },
+        {
+          "word": "afectar",
+          "pos": "tr.",
+          "meaning": "波及 ， 影 响 ¡violencia E 暴力 ; masacre 天 ( 大 规模 ) 屠杀 1 conquistador, ra m.,f. 征服 者 ， suprimir tr. 取消 ， 删 除 1，de un plumazo loc.adv. 一 笔 ， 一 下 子 ¡encuentro m. 会 面 ， 相 会 ¡fusión 六 融化 ; 合并"
+        },
+        {
+          "word": "mestizo, za",
+          "pos": "adj.",
+          "meaning": "混血 的 ; 杂交 的"
+        },
+        {
+          "word": "traicionar",
+          "pos": "tr.",
+          "meaning": "背叛"
+        },
+        {
+          "word": "traidor, ra m.,f.",
+          "pos": "",
+          "meaning": "叛徒"
+        },
+        {
+          "word": "uso",
+          "pos": "m.",
+          "meaning": "使 用"
+        },
+        {
+          "word": "Francisco Pizarro",
+          "pos": "",
+          "meaning": "佛 朗 西 斯 科 . 皮 萨 罗"
+        }
+      ],
+      "additional": [],
+      "raw_ocr": {
+        "page1_left": "O VOCABULARIO\n\na n=\n\n| inca m..f. 印加 人 人 ;， 印加 王\n\ndesarrollar tr. 发 展\n\ncivilización f 文明\n\n| invason ra m.,f. 侵略 者\n\n- superioridad f 优势\n\narma 天 武器\n\nestrategia f. 战略\n\n- intriga f det\n\ntraición f 背叛\n\nFi conquistar tr. 征服\n\n- someter(se) tr;prni. 使 届 服 ; 屈服\n\ndestruir tr. 破坏 ， 毁 坏\n\nenlo esencial loc.adv. 本 质 上 ， 基 本 上\n\n| político, ca adj.-s. ”政治 的 ;政治 家\n\nhe aquí 下 面 就 是\n\n| episodio -m. 轶 事\n\ndenominar tr. 命名\n\nconquista f 征服\n\nemperador, atriz m.,f. 皇帝 ， 皇 后\n\ncampamento m. FE\n\nextraño, ña ad). 奇怪 的\n\n- derribar tr. 推倒\n\n| temor m. 害怕\n\n| permanecer intr. 处 在 ， 保 持 …… 状 态\n\nsereno, na adj. 镇 静 的\n\n| visitante m.,f. 来 访 者\nmensajero, ra  m..f. 使 者 ， 送 信人\n\n| porcompleto  loc.adv. 完全 ， 彻 底\n\n| señal f 言 号\n\nvencer tr. 战胜\n\n| verse obligado a perifverb. 被 迫\n\ntrampa £ 陷阱\n\ninvitaci6n f 邀请 ， 邀 请 函\n\n| ponerseen camino perifverb. EX\n\ninvadir tr. 侵略\n\nlocura pa FE, ER\n\n| amenazar tr. 威胁\nfirme adj. 坚定 的\n\n专 有 名 词 NOME\nHernando de Soto TES - 德 索 托\n\n",
+        "page1_right": "desierto, ta ad). 荒 无 人 烟 的\nal encuentro de loc.adv. 迎面\n\nconvertir(se) (a) tr.;prnl. (645; AR\n\n: cristianismo m. 基督 教\n\n¡Papa m. 教皇\n\n! loco, ca adj.-s. ME; 疯子\n\n上 derecho m. 权利\n\n， firmeza X (意志 ) LE\n\n， amenaza 天 威胁\n\n: dadiva £ 礼品 ， 馈 赠\n\n' fuerza 天 力量\n\n¡  porsorpresa  loc.adv. WEB\n\n! graciasa loc.adv. 由 于\n\nhacer prisionero _perifuerb， 俘 瞄\n\ncuarto m. 518\n\n; metal m. 金属\n\n; libertad f 自由\n\n;  deseguro loc.adv. 肯定 ， 一 定\n\n， rebelión f 叛乱 ， 起 义\n\n4 mestizaje m. 混血 ; 杂交 ; 融合 ，\n\n| 混合\nestablecerse prnl. 定居\nNuevo Mundo 新 世界 ， 新 大 陆\nley 天 法 律\nafectar tr. 波及 ， 影 响\n\n¡violencia E 暴力\n\n; destrucción f RES\n\n; masacre 天 ( 大 规模 ) 屠杀\n\n1 conquistador, ra m.,f. 征服 者\n\n， suprimir tr. 取消 ， 删 除\n\n1，de un plumazo  loc.adv. 一 笔 ， 一 下 子\n\n! sobrevivir intr. DERE\n¡encuentro m. 会 面 ， 相 会\n¡fusión 六 融化 ; 合并\nmestizo, za adj. 混血 的 ; 杂交 的\n\nRAS ADICIONALES\n: serenidad 天 平静 ， 镇 定\ntraicionar tr. 背叛\ntraidor, ra m.,f. 叛徒\nuso m. 使 用\nIBRES PROPIOS\n\nFrancisco Pizarro 佛 朗 西 斯 科 . 皮 萨 罗\n",
+        "page2_left": "不 规则 动词 VERBOS IRREGULARES\n\nestablecer: Se conjuga como agrade\npermanecer: Se conjuga como agrade\n\n变 位 中 有 书写 变化 的 动词 VERBOS CO\nCONJUGACIONES\n\namenazar: Se conjuga como abraza\ndestruir: Se conjuga como recons;\nvencer: Se conjuga como conven\n\nAa CAE) vocasios usua\n\nA. tr 接受 (礼品 、 邀 请 、 帮 助 等 )\n1. El visitante me regaló un par de copa\n2. Era la primera vez que Felipe invitab\nsu invitación, pero aceptó encantada.\n3. Aunque Jesús enfrentaba muchas «\n",
+        "page2_right": "decer.\n\ndecer.\n\nIN CAMBIOS ORTOGRÁFICOS EN ALGUNAS\n\nzar.\nastruir.\n\nencer.\nALGUNOS\nALES\n\npas de jade. Las acepté y le di las gracias.\n\naba a cenar a su novia y temía que ella no aceptara\na.\n\ns dificultades en el trabajo, no pensaba aceptar\n"
+      }
+    },
+    {
+      "unit": 4,
+      "source_pdf_pages": [
+        80,
+        81
+      ],
+      "vocabulary": [
+        {
+          "word": "arca ñ",
+          "pos": "",
+          "meaning": "大 箱子 ; 方舟"
+        },
+        {
+          "word": "Biblia",
+          "pos": "f",
+          "meaning": "圣经"
+        },
+        {
+          "word": "Dios",
+          "pos": "",
+          "meaning": "上 帝"
+        },
+        {
+          "word": "hecho",
+          "pos": "m.",
+          "meaning": "事实"
+        },
+        {
+          "word": "final",
+          "pos": "m.",
+          "meaning": "结束 ， 结 尾"
+        },
+        {
+          "word": "leyenda",
+          "pos": "",
+          "meaning": "大 传阅， 神话"
+        },
+        {
+          "word": "titular",
+          "pos": "tr.",
+          "meaning": "给 (文章 等 ) 定 题目"
+        },
+        {
+          "word": "Génesis 3",
+          "pos": "",
+          "meaning": "创世纪"
+        },
+        {
+          "word": "mortificar(se) — tr;pral.",
+          "pos": "",
+          "meaning": "使 请 苦 不 安 ; 痛苦 不 安"
+        },
+        {
+          "word": "comportamiento",
+          "pos": "m.",
+          "meaning": "行为"
+        },
+        {
+          "word": "crear",
+          "pos": "tr",
+          "meaning": "创造 ; 建立"
+        },
+        {
+          "word": "recto ta",
+          "pos": "adj.",
+          "meaning": "直 的 ; 正直 的 estimar tr. 敬重"
+        },
+        {
+          "word": "maldad",
+          "pos": "",
+          "meaning": "下 恶 行"
+        },
+        {
+          "word": "pertenencia ya",
+          "pos": "",
+          "meaning": "财产"
+        },
+        {
+          "word": "construir",
+          "pos": "tr.",
+          "meaning": "建造 ， 建 设"
+        },
+        {
+          "word": "listo, ta",
+          "pos": "adj.",
+          "meaning": "准备 好"
+        },
+        {
+          "word": "diluvio",
+          "pos": "m.",
+          "meaning": "豪雨"
+        },
+        {
+          "word": "arena",
+          "pos": "f",
+          "meaning": "沙子 desierto m. 沙漠"
+        },
+        {
+          "word": "abordo loc.adp，",
+          "pos": "",
+          "meaning": "上 船 (飞机 ); 在 船 (飞机 ) 上"
+        },
+        {
+          "word": "yerno",
+          "pos": "m.",
+          "meaning": "女婿"
+        },
+        {
+          "word": "macho adj-m.",
+          "pos": "",
+          "meaning": "公 的 ， 雄 的 ; RELE"
+        },
+        {
+          "word": "hembra adj-f ER, MERO",
+          "pos": "",
+          "meaning": "肉 性"
+        },
+        {
+          "word": "gigantesco, ca",
+          "pos": "adj.",
+          "meaning": "巨大 的 ， 庞 大 的"
+        },
+        {
+          "word": "embarcación",
+          "pos": "",
+          "meaning": "大 船舶"
+        },
+        {
+          "word": "Hot",
+          "pos": "intr",
+          "meaning": "漂浮 ¿monte m. 山 ¿inundación ñ 洪水 ， 水 灾"
+        },
+        {
+          "word": "En explorar",
+          "pos": "",
+          "meaning": "人 勘探 勘察， 探测"
+        },
+        {
+          "word": "l asentarse",
+          "pos": "prnl.",
+          "meaning": "栖息 ， 落 脚"
+        },
+        {
+          "word": "equivocarse",
+          "pos": "prnl.",
+          "meaning": "搞 错 ， 弄 错 3 judío,día mf. 犹太 人 musulman, na 。 adj.-s. 伊斯兰 教 的 ; 伊斯兰"
+        },
+        {
+          "word": "YE",
+          "pos": "",
+          "meaning": "教徒 catolicismo m. 天 主教 1 primitivo, va adj. 原始 的"
+        },
+        {
+          "word": "sagrado, da",
+          "pos": "adj.",
+          "meaning": "神圣 的 Antiguo Testamento 旧 约 全 书"
+        },
+        {
+          "word": "i recopilación",
+          "pos": "",
+          "meaning": "上 汇编 ， 收 集 ¿ Nuevo Testamento 新 约 全 书"
+        },
+        {
+          "word": "exploración",
+          "pos": "",
+          "meaning": "上 勘探 ， 勘 测 ， 探 测 humanidad 3 人 类 ¿inundar tr. 淹没"
+        }
+      ],
+      "additional": [
+        {
+          "word": "bíblico, ca",
+          "pos": "adj.",
+          "meaning": "圣经 的"
+        },
+        {
+          "word": "comportarse pral.",
+          "pos": "",
+          "meaning": "行为 举止"
+        },
+        {
+          "word": "construcción",
+          "pos": "",
+          "meaning": "大 建设 ; 建筑 物"
+        },
+        {
+          "word": "creación",
+          "pos": "f",
+          "meaning": "创造 专 有 名 词 NOMI"
+        },
+        {
+          "word": "Jesucristo",
+          "pos": "",
+          "meaning": "耶稣 基督"
+        }
+      ],
+      "raw_ocr": {
+        "quick_note": "unit 4 extracted with lower-resolution fast OCR"
+      }
+    }
+  ],
+  "extracted_units": [
+    1,
+    2,
+    3,
+    4
+  ]
+}

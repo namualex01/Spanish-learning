@@ -574,6 +574,20 @@
               选择词库
               <select id="deckSelect"></select>
             </label>
+            <div class="row-2">
+              <label>
+                册数（Quizlet）
+                <select id="bookSelect">
+                  <option value="">全部册数</option>
+                </select>
+              </label>
+              <label>
+                单元（Quizlet）
+                <select id="unitSelect">
+                  <option value="">全部单元</option>
+                </select>
+              </label>
+            </div>
 
             <div class="row-2">
               <label>
@@ -606,6 +620,30 @@
             <span class="hint" id="deckCountHint">0 个单词</span>
           </div>
           <div class="list-preview" id="deckPreview"></div>
+        </div>
+
+        <div class="panel section">
+          <div class="section-title">
+            <h3>外部 JSON 词库</h3>
+          </div>
+          <div class="custom-box">
+            <p>
+              支持从本地文件或 URL 加载词库。字段建议包含：<strong>word, meaning, book, unit</strong>。
+            </p>
+          </div>
+          <label>
+            本地 JSON 文件（可一次选 2 个）
+            <input id="jsonFileInput" type="file" accept="application/json,.json" multiple />
+          </label>
+          <label>
+            远程 JSON 地址
+            <input id="jsonUrlInput" type="url" placeholder="例如：https://example.com/modern_spanish_1_4.json" />
+          </label>
+          <div class="cta-row">
+            <button class="btn-primary" id="loadJsonBtn">加载外部 JSON</button>
+            <button class="btn-secondary" id="clearJsonBtn">清除外部词库</button>
+          </div>
+          <div class="hint" id="jsonStatusHint">当前未加载外部 Quizlet JSON 词库。</div>
         </div>
 
         <div class="panel section">
@@ -759,6 +797,7 @@
     const STORAGE_KEYS = {
       activeDeck: 'spanish_vocab_active_deck_v1',
       customDeck: 'spanish_vocab_custom_deck_v1',
+      externalLibrary: 'spanish_vocab_external_library_v1',
       progress: 'spanish_vocab_progress_v1',
       accuracy: 'spanish_vocab_accuracy_v1',
       mode: 'spanish_vocab_mode_v1',
@@ -774,13 +813,23 @@
       voices: [],
       stats: loadAccuracy(),
       progressMap: loadProgress(),
-      decks: {}
+      decks: {},
+      externalLibrary: loadExternalLibrary(),
+      selectedBook: '',
+      selectedUnit: ''
     };
 
     const el = {
       deckSelect: document.getElementById('deckSelect'),
+      bookSelect: document.getElementById('bookSelect'),
+      unitSelect: document.getElementById('unitSelect'),
       deckPreview: document.getElementById('deckPreview'),
       deckCountHint: document.getElementById('deckCountHint'),
+      jsonFileInput: document.getElementById('jsonFileInput'),
+      jsonUrlInput: document.getElementById('jsonUrlInput'),
+      loadJsonBtn: document.getElementById('loadJsonBtn'),
+      clearJsonBtn: document.getElementById('clearJsonBtn'),
+      jsonStatusHint: document.getElementById('jsonStatusHint'),
       statDeck: document.getElementById('statDeck'),
       statProgress: document.getElementById('statProgress'),
       statAccuracy: document.getElementById('statAccuracy'),
@@ -825,6 +874,102 @@
       } catch {
         return null;
       }
+    }
+
+    function loadExternalLibrary() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEYS.externalLibrary);
+        if (!raw) return null;
+        const parsed = JSON.parse(raw);
+        return normalizeExternalLibrary(parsed);
+      } catch {
+        return null;
+      }
+    }
+
+    function saveExternalLibrary(library) {
+      localStorage.setItem(STORAGE_KEYS.externalLibrary, JSON.stringify(library));
+    }
+
+    function normalizeExternalLibrary(raw) {
+      if (!raw) return null;
+      if (Array.isArray(raw)) {
+        return { items: raw };
+      }
+      if (Array.isArray(raw.items)) {
+        return { items: raw.items };
+      }
+      if (Array.isArray(raw.books)) {
+        const items = [];
+        raw.books.forEach(bookNode => {
+          const book = bookNode.book || bookNode.volume || bookNode.name || '';
+          (bookNode.units || []).forEach(unitNode => {
+            const unit = unitNode.unit || unitNode.lesson || unitNode.name || '';
+            (unitNode.items || []).forEach(item => items.push({ ...item, book, unit }));
+          });
+        });
+        return { items };
+      }
+      const genericItems = extractItemsFromUnknown(raw);
+      if (genericItems.length) {
+        return { items: genericItems };
+      }
+      return null;
+    }
+
+    function isBookLabel(text) {
+      return /(第?\s*\d+\s*册|book\s*\d+)/i.test(text || '');
+    }
+
+    function isUnitLabel(text) {
+      return /(第?\s*\d+\s*单元|unidad\s*\d+|unit\s*\d+|lesson\s*\d+)/i.test(text || '');
+    }
+
+    function extractItemsFromUnknown(node, ctx = { book: '', unit: '' }) {
+      if (!node) return [];
+      if (Array.isArray(node)) {
+        return node.map(item => ({ ...item, book: item.book || ctx.book, unit: item.unit || ctx.unit }));
+      }
+      if (typeof node !== 'object') return [];
+
+      if ((node.word || node.term) && (node.meaning || node.definition)) {
+        return [{ ...node, book: node.book || ctx.book, unit: node.unit || ctx.unit }];
+      }
+
+      const items = [];
+      Object.entries(node).forEach(([key, value]) => {
+        const nextCtx = { ...ctx };
+        if (isBookLabel(key)) nextCtx.book = key;
+        if (isUnitLabel(key)) nextCtx.unit = key;
+        items.push(...extractItemsFromUnknown(value, nextCtx));
+      });
+      return items;
+    }
+
+    function normalizeExternalItem(item) {
+      const word = String(item.word || item.term || '').trim();
+      const meaning = String(item.meaning || item.definition || '').trim();
+      if (!word || !meaning) return null;
+      return {
+        word,
+        meaning,
+        pos: String(item.pos || item.partOfSpeech || item.type || '—').trim(),
+        example: String(item.example || item.sentence || '暂无例句').trim(),
+        book: String(item.book || item.volume || item册数 || '').trim(),
+        unit: String(item.unit || item.lesson || item单元 || '').trim()
+      };
+    }
+
+    function inferBookUnitFromFilename(fileName) {
+      const name = String(fileName || '');
+      const bookMatch = name.match(/第?\s*(\d+)\s*册|book\s*(\d+)/i);
+      const unitMatch = name.match(/第?\s*(\d+)\s*单元|unit\s*(\d+)|lesson\s*(\d+)/i);
+      const bookNum = bookMatch ? (bookMatch[1] || bookMatch[2]) : '';
+      const unitNum = unitMatch ? (unitMatch[1] || unitMatch[2] || unitMatch[3]) : '';
+      return {
+        book: bookNum ? `第${bookNum}册` : '',
+        unit: unitNum ? `第${unitNum}单元` : ''
+      };
     }
 
     function saveCustomDeck(items) {
@@ -875,12 +1020,24 @@
           items: customItems
         };
       }
+      if (state.externalLibrary && state.externalLibrary.items.length) {
+        decks.quizletExternal = {
+          label: 'Quizlet 外部词库',
+          items: state.externalLibrary.items
+        };
+      }
       return decks;
     }
 
     function getDeckItems() {
       const deck = state.decks[state.activeDeckKey];
-      return deck ? deck.items : [];
+      if (!deck) return [];
+      if (state.activeDeckKey !== 'quizletExternal') return deck.items;
+      return deck.items.filter(item => {
+        const bookOk = !state.selectedBook || item.book === state.selectedBook;
+        const unitOk = !state.selectedUnit || item.unit === state.selectedUnit;
+        return bookOk && unitOk;
+      });
     }
 
     function getCurrentWord() {
@@ -917,6 +1074,52 @@
       });
     }
 
+    function renderBookAndUnitOptions() {
+      const isExternal = state.activeDeckKey === 'quizletExternal';
+      el.bookSelect.disabled = !isExternal;
+      el.unitSelect.disabled = !isExternal;
+      if (!isExternal) {
+        el.bookSelect.innerHTML = '<option value="">全部册数</option>';
+        el.unitSelect.innerHTML = '<option value="">全部单元</option>';
+        state.selectedBook = '';
+        state.selectedUnit = '';
+        return;
+      }
+
+      const sourceItems = state.decks.quizletExternal?.items || [];
+      const books = [...new Set(sourceItems.map(item => item.book).filter(Boolean))];
+      el.bookSelect.innerHTML = '<option value="">全部册数</option>';
+      books.forEach(book => {
+        const option = document.createElement('option');
+        option.value = book;
+        option.textContent = book;
+        if (book === state.selectedBook) option.selected = true;
+        el.bookSelect.appendChild(option);
+      });
+
+      if (state.selectedBook && !books.includes(state.selectedBook)) {
+        state.selectedBook = '';
+      }
+
+      const units = [...new Set(
+        sourceItems
+          .filter(item => !state.selectedBook || item.book === state.selectedBook)
+          .map(item => item.unit)
+          .filter(Boolean)
+      )];
+      el.unitSelect.innerHTML = '<option value="">全部单元</option>';
+      units.forEach(unit => {
+        const option = document.createElement('option');
+        option.value = unit;
+        option.textContent = unit;
+        if (unit === state.selectedUnit) option.selected = true;
+        el.unitSelect.appendChild(option);
+      });
+      if (state.selectedUnit && !units.includes(state.selectedUnit)) {
+        state.selectedUnit = '';
+      }
+    }
+
     function renderDeckPreview() {
       const items = getDeckItems();
       el.deckCountHint.textContent = `${items.length} 个单词`;
@@ -941,7 +1144,10 @@
       const progress = deckProgressKey(state.activeDeckKey);
       const total = state.stats.total || 0;
       const acc = total ? Math.round((state.stats.correct / total) * 100) : 0;
-      el.statDeck.textContent = deck ? deck.label : '—';
+      const scopeText = state.activeDeckKey === 'quizletExternal'
+        ? [state.selectedBook || '全部册数', state.selectedUnit || '全部单元'].join(' · ')
+        : '';
+      el.statDeck.textContent = deck ? `${deck.label}${scopeText ? ` (${scopeText})` : ''}` : '—';
       el.statProgress.textContent = `${progress.known.length} / ${items.length}`;
       el.statAccuracy.textContent = `${acc}%`;
     }
@@ -1164,6 +1370,78 @@
       renderAll();
     }
 
+    function applyExternalLibrary(rawData) {
+      const normalized = normalizeExternalLibrary(rawData);
+      if (!normalized) {
+        alert('JSON 格式不支持：请提供数组，或 { items: [] } / { books: [] } 结构。');
+        return;
+      }
+      const items = normalized.items
+        .map(normalizeExternalItem)
+        .filter(Boolean);
+      if (!items.length) {
+        alert('未解析到有效词条，请确认存在 word/meaning（或 term/definition）字段。');
+        return;
+      }
+      state.externalLibrary = { items };
+      state.selectedBook = '';
+      state.selectedUnit = '';
+      saveExternalLibrary(state.externalLibrary);
+      state.decks = getAllDecks();
+      state.activeDeckKey = 'quizletExternal';
+      state.currentIndex = 0;
+      localStorage.setItem(STORAGE_KEYS.activeDeck, state.activeDeckKey);
+      renderAll();
+      alert(`外部词库加载成功，共 ${items.length} 个词条。`);
+    }
+
+    async function loadExternalJsonFromInput() {
+      const files = Array.from(el.jsonFileInput.files || []);
+      const url = el.jsonUrlInput.value.trim();
+      try {
+        if (files.length) {
+          const merged = [];
+          for (const file of files) {
+            const text = await file.text();
+            const normalized = normalizeExternalLibrary(JSON.parse(text));
+            if (!normalized) continue;
+            const inferred = inferBookUnitFromFilename(file.name);
+            normalized.items.forEach(item => {
+              merged.push({
+                ...item,
+                book: item.book || inferred.book,
+                unit: item.unit || inferred.unit
+              });
+            });
+          }
+          applyExternalLibrary(merged);
+          return;
+        }
+        if (url) {
+          const response = await fetch(url);
+          if (!response.ok) throw new Error(`HTTP ${response.status}`);
+          applyExternalLibrary(await response.json());
+          return;
+        }
+        alert('请先选择 JSON 文件或输入 JSON 地址。');
+      } catch (error) {
+        alert(`加载失败：${error.message}`);
+      }
+    }
+
+    function clearExternalLibrary() {
+      state.externalLibrary = null;
+      state.selectedBook = '';
+      state.selectedUnit = '';
+      localStorage.removeItem(STORAGE_KEYS.externalLibrary);
+      state.decks = getAllDecks();
+      if (state.activeDeckKey === 'quizletExternal') {
+        state.activeDeckKey = 'basics';
+        localStorage.setItem(STORAGE_KEYS.activeDeck, state.activeDeckKey);
+      }
+      renderAll();
+    }
+
     function escapeHtml(str) {
       return String(str)
         .replace(/&/g, '&amp;')
@@ -1178,7 +1456,20 @@
         state.activeDeckKey = el.deckSelect.value;
         state.currentIndex = 0;
         state.translationVisible = false;
+        state.selectedBook = '';
+        state.selectedUnit = '';
         localStorage.setItem(STORAGE_KEYS.activeDeck, state.activeDeckKey);
+        renderAll();
+      });
+      el.bookSelect.addEventListener('change', () => {
+        state.selectedBook = el.bookSelect.value;
+        state.selectedUnit = '';
+        state.currentIndex = 0;
+        renderAll();
+      });
+      el.unitSelect.addEventListener('change', () => {
+        state.selectedUnit = el.unitSelect.value;
+        state.currentIndex = 0;
         renderAll();
       });
 
@@ -1228,18 +1519,24 @@
 
       el.importDeckBtn.addEventListener('click', importCustomDeck);
       el.clearCustomDeckBtn.addEventListener('click', clearCustomDeck);
+      el.loadJsonBtn.addEventListener('click', loadExternalJsonFromInput);
+      el.clearJsonBtn.addEventListener('click', clearExternalLibrary);
     }
 
     function renderAll() {
       state.decks = getAllDecks();
       ensureDeckKeyValid();
       renderDeckOptions();
+      renderBookAndUnitOptions();
       renderDeckPreview();
       renderStats();
       renderWordCard();
       switchMode(state.mode);
       el.rateRange.value = String(state.rate);
       el.rateValue.value = state.rate.toFixed(1);
+      el.jsonStatusHint.textContent = state.externalLibrary
+        ? `已加载外部词库：${state.externalLibrary.items.length} 个词条。`
+        : '当前未加载外部 Quizlet JSON 词库。';
     }
 
     function initSpeech() {
